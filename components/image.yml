@@ -1,14 +1,13 @@
-# FILEPATH: /home/taorepoara/lenra/api/components/image.schema.json
+# FILEPATH: /home/taorepoara/lenra/api/components/image.yml
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: components/image.schema.json
+$id: components/image.yml
 title: Image
 description: Element of type Image
-type: component
+type: object
 properties:
-    type:
+    _type:
         description: The type of the element
-        enum:
-            - image
+        const: image
     src:
         description: The URL to the image. Will fetch the application's image if the URL does not start with `http(s)://`.
         type: string
@@ -20,26 +19,26 @@ properties:
         type: number
     alignment:
         description: How to align the image.
-        $ref: ../defs/alignment.schema.json
+        $ref: ../defs/alignment.yml
     centerSlice:
         description: The center slice for a nine-patch image.
-        $ref: ../defs/rect.schema.json
+        $ref: ../defs/rect.yml
     errorPlaceholder:
         description: The error placeholder when the image encounters an error during loading.
-        $ref: ../component.schema.json
+        $ref: ../lenra-component.yml
     excludeFromSemantics:
         description: Whether to exclude this image from semantics.
         type: boolean
         default: false
     filterQuality:
         description: The quality of the image.
-        $ref: ../defs/filterQuality.schema.json
+        $ref: ../defs/filterQuality.yml
     fit:
         description: How the image should fit the parent box.
-        $ref: ../defs/boxFit.schema.json
+        $ref: ../defs/boxFit.yml
     framePlaceholder:
         description: A placeholder to display while the image is loading or to add effects to the image.
-        $ref: ../component.schema.json
+        $ref: ../lenra-component.yml
     gaplessPlayback:
         description: Whether the old image (true) or nothing (false) is shown when the image provider changes.
         type: boolean
@@ -50,10 +49,10 @@ properties:
         default: false
     loadingPlaceholder:
         description: A placeholder to display while the image is still loading.
-        $ref: ../component.schema.json
+        $ref: ../lenra-component.yml
     repeat:
         description: How the image should be repeated accross the bounds not covered by the image.
-        $ref: ../defs/imageRepeat.schema.json
+        $ref: ../defs/imageRepeat.yml
     semanticLabel:
         description: A semantic description of the image. This is used for TalkBack on Android and VoiceOver on IOS.
         type: string

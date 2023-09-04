@@ -1,0 +1,16 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: defs/alignment.yml
+title: Alignment
+description: The alignment to use.
+type: string
+enum:
+  - bottomCenter
+  - bottomLeft
+  - bottomRight
+  - center
+  - centerLeft
+  - centerRight
+  - topCenter
+  - topLeft
+  - topRight
+default: center

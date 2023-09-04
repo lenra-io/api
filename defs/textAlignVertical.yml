@@ -1,0 +1,9 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: defs/textAlignVertical.yml
+title: TextAlignVertical
+description: Component of type TextAlignVertical.
+type: string
+enum:
+  - bottom
+  - center
+  - top

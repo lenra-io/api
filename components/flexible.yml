@@ -1,23 +1,21 @@
-# FILEPATH: /home/taorepoara/lenra/api/components/flexible.schema.json
+# FILEPATH: /home/taorepoara/lenra/api/components/flexible.yml
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: components/flexible.schema.json
+$id: components/flexible.yml
 title: Flexible
 description: Element of type Flexible
-type: component
-properties:
-    type:
-        description: The type of the element
-        enum:
-            - flexible
-    flex:
+allOf:
+  - $ref: ./_abstract.yml
+  - properties:
+      _type:
+        const: flexible
+      flex:
         description: How a flexible child is inscribed into the available space.
         type: integer
         default: 1
-    fit:
-        $ref: ../defs/flexFit.schema.json
-    child:
-        $ref: ../component.schema.json
+      fit:
+        $ref: ../defs/flexFit.yml
+      child:
+        $ref: ../lenra-component.yml
 required:
-    - type
     - child
 additionalProperties: false

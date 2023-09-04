@@ -1,0 +1,15 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: query/shortAnd.yml
+title: ShortAnd
+description: ShortAnd query identifier
+type: object
+properties:
+  $and:
+    $ref: query/and.yml
+patternProperties:
+  ^[a-zA-Z0-9_]+$:
+    oneOf:
+      - $ref: query/value.yml
+      - $ref: query/binaryFunction.yml
+      - $ref: query/shortAndFunctions.yml
+additionalProperties: false

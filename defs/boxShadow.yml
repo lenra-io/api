@@ -1,0 +1,19 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: defs/boxShadow.yml
+title: BoxShadow
+description: Element of type BoxShadow
+type: object
+properties:
+  color:
+    $ref: ../defs/color.yml
+  blurRadius:
+    description: The blur radius
+    type: number
+    default: 0
+  spreadRadius:
+    description: The spread radius
+    type: number
+    default: 0
+  offset:
+    $ref: ../defs/offset.yml
+additionalProperties: false

@@ -1,0 +1,10 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: query/keyValue.yml
+title: KeyValue
+description: KeyValue query identifier
+type: object
+patternProperties:
+  ^[a-zA-Z0-9_]+$:
+    oneOf:
+      - $ref: query/value.yml
+      - $ref: query/binaryFunction.yml

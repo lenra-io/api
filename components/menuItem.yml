@@ -1,14 +1,13 @@
-# FILEPATH: /home/taorepoara/lenra/api/components/menuItem.schema.json
+# FILEPATH: /home/taorepoara/lenra/api/components/menuItem.yml
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: components/menu_item.schema.json
+$id: components/menu_item.yml
 title: MenuItem
 description: Element of type MenuItem
-type: component
+type: object
 properties:
-    type:
+    _type:
         description: The type of the element
-        enum:
-            - menuItem
+        const: menuItem
     text:
         description: The text of the element
         type: string
@@ -21,9 +20,9 @@ properties:
         type: boolean
         default: false
     icon:
-        $ref: ../components/icon.schema.json
+        $ref: ../components/icon.yml
     onPressed:
-        $ref: ../defs/listener.schema.json
+        $ref: ../defs/listener.yml
 required:
     - type
     - text

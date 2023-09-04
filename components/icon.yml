@@ -1,42 +1,39 @@
-# FILEPATH: /home/taorepoara/lenra/api/components/icon.schema.json
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: components/icon.schema.json
+$id: components/icon.yml
 title: Icon
 description: The Icon to use
-type: component
-additionalProperties: false
-required:
-    - type
-    - value
-properties:
-    type:
-        description: The type of the element
-        enum:
-            - icon
-    size:
+allOf:
+  - $ref: ./_abstract.yml
+  - properties:
+      _type:
+        const: icon
+      size:
         description: The size of the Icon
         type: number
         default: 24
-    color:
+      color:
         description: The color of the Icon. If not set or null, the color is inherited from the theme.
-        $ref: ../defs/color.schema.json
+        $ref: ../defs/color.yml
         default: null
-    semanticLabel:
+      semanticLabel:
         description: The semantic label for the Icon. This will be announced when using accessibility mode.
         type: string
         default: null
-    value:
+      value:
         description: The value of the Icon
-        $ref: ../defs/iconName.schema.json
-    style:
+        $ref: ../defs/iconName.yml
+      style:
         $ref: '#/definitions/iconStyle'
+additionalProperties: false
+required:
+  - value
 definitions:
-    iconStyle:
-        type: string
-        description: The style of the Icon
-        enum:
-            - filled
-            - sharp
-            - rounded
-            - outlined
-        default: filled
+  iconStyle:
+    type: string
+    description: The style of the Icon
+    enum:
+      - filled
+      - sharp
+      - rounded
+      - outlined
+    default: filled

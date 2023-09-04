@@ -1,16 +1,15 @@
-# FILEPATH: /home/taorepoara/lenra/api/components/slider.schema.json
+# FILEPATH: /home/taorepoara/lenra/api/components/slider.yml
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: components/slider.schema.json
+$id: components/slider.yml
 title: Slider
 description: Element of type Slider
-type: component
+type: object
 properties:
-    type:
+    _type:
         description: The identifier of the component
-        enum:
-            - slider
+        const: slider
     style:
-        $ref: ../defs/sliderStyle.schema.json
+        $ref: ../defs/sliderStyle.yml
     autofocus:
         description: Whether the slider should be focused initially.
         type: boolean
@@ -31,13 +30,13 @@ properties:
         default: 1.0
     onChanged:
         description: The callback to be invoked when the slider value changes.
-        $ref: ../defs/listener.schema.json
+        $ref: ../defs/listener.yml
     onChangeEnd:
         description: The callback to be invoked when the slider is released.
-        $ref: ../defs/listener.schema.json
+        $ref: ../defs/listener.yml
     onChangeStart:
         description: The callback to be invoked when the slider is pressed.
-        $ref: ../defs/listener.schema.json
+        $ref: ../defs/listener.yml
     value:
         description: The current value of the slider.
         type: number

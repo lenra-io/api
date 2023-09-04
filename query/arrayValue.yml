@@ -1,0 +1,8 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: query/arrayValue.yml
+title: ArrayValue
+description: ArrayValue query identifier
+type: array
+items:
+  $ref: query/value.yml
+additionalProperties: false

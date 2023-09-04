@@ -1,0 +1,10 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: components/listener.yml
+title: Listener
+allOf:
+  - $ref: ./_abstract.yml
+  - $ref: ../defs/listener.yml
+  - properties:
+      _type:
+        const: listener
+additionalProperties: false

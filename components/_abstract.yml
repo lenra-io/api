@@ -1,0 +1,8 @@
+$id: components/_abstract.yml
+type: object
+properties:
+    _type:
+        description: The identifier of the component
+        type: string
+required:
+    - type

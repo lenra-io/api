@@ -1,9 +1,0 @@
-$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: query/eq.schema.json
-title: Eq
-description: Eq query identifier
-type: object
-properties:
-  $eq:
-    $ref: query/value.schema.json
-additionalProperties: false

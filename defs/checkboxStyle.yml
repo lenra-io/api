@@ -1,0 +1,24 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: defs/checkboxStyle.yml
+title: CheckboxStyle
+description: Element of type CheckboxStyle
+type: object
+properties:
+  activeColor:
+    $ref: ../defs/color.yml
+  checkColor:
+    $ref: ../defs/color.yml
+  focusColor:
+    $ref: ../defs/color.yml
+  hoverColor:
+    $ref: ../defs/color.yml
+  splashRadius:
+    description: The splash radius.
+    type: number
+  visualDensity:
+    $ref: ../defs/visualDensity.yml
+  shape:
+    $ref: ../defs/outlinedBorder.yml
+  side:
+    $ref: ../defs/borderSide.yml
+additionalProperties: false

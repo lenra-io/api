@@ -1,0 +1,21 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: components/status_sticker.yml
+title: StatusSticker
+description: Element of type StatusSticker
+type: object
+properties:
+  _type:
+    description: The type of the element
+    const: statusSticker
+  status:
+    description: the status of the element
+    type: string
+    enum:
+      - success
+      - warning
+      - error
+      - pending
+required:
+  - type
+  - status
+additionalProperties: false

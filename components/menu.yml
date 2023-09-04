@@ -1,19 +1,18 @@
-# FILEPATH: /home/taorepoara/lenra/api/components/menu.schema.json
+# FILEPATH: /home/taorepoara/lenra/api/components/menu.yml
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: components/menu.schema.json
+$id: components/menu.yml
 title: Menu
 description: Element of type Menu
-type: component
+type: object
 properties:
-    type:
+    _type:
         description: The type of the element
-        enum:
-            - menu
+        const: menu
     children:
         type: array
         description: The menu items
         items:
-            $ref: ../component.schema.json
+            $ref: ../lenra-component.yml
 required:
     - type
     - children

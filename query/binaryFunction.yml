@@ -1,0 +1,7 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: query/binaryFunction.yml
+title: Binary Function
+description: Binary Function query identifier
+oneOf:
+  - $ref: query/eq.yml
+  - $ref: query/contains.yml

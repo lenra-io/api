@@ -1,0 +1,150 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: defs/inputDecoration.yml
+title: InputDecoration
+description: Element of type InputDecoration
+type: object
+properties:
+  alignLabelWithHint:
+    description: Whether to align the label with the hint or not. Defaults to false.
+    type: boolean
+    default: false
+  border:
+    description: The border to display around the input. Will render a border by
+      default when border is null.
+    $ref: ../defs/inputBorder.yml
+  constraints:
+    description: The constraints to be applied to the input.
+    $ref: ../defs/boxConstraints.yml
+  contentPadding:
+    description: The padding to be applied to the input.
+    $ref: ../defs/padding.yml
+  counter:
+    type: object
+  counterStyle:
+    description: The style use for the counterText.
+    $ref: ../defs/textStyle.yml
+  counterText:
+    description: The text to place below the line as a character counter.
+    type: string
+  disabledBorder:
+    description: The border to display when the input is disabled and not showing an error.
+    $ref: ../defs/inputBorder.yml
+  enabled:
+    description: Whether the input is enabled or disabled.
+    type: boolean
+  enabledBorder:
+    description: The border to display when the input is enabled and not showing an error.
+    $ref: ../defs/inputBorder.yml
+  errorBorder:
+    description: The border to display when the input has an error and does not have
+      the focus.
+    $ref: ../defs/inputBorder.yml
+  errorMaxLines:
+    description: The maximum number of lines the error text can use.
+    type: integer
+  errorStyle:
+    description: The style to use for the error text.
+    $ref: ../defs/textStyle.yml
+  errorText:
+    description: The error text to display when the input has an error.
+    type: string
+  fillColor:
+    description: The fill color of the input.
+    $ref: ../defs/color.yml
+  filled:
+    description: Whether the input is filled with fillColor.
+    type: boolean
+  floatingLabelBehavior:
+    description: Defines how the floating label should be displayed.
+    $ref: ../defs/floatingLabelBehavior.yml
+  floatingLabelStyle:
+    description: The style to use for the floating label.
+    $ref: ../defs/textStyle.yml
+  focusColor:
+    description: The color to use when the input is focused.
+    $ref: ../defs/color.yml
+  focusedBorder:
+    description: The border to display when the input has the focus.
+    $ref: ../defs/inputBorder.yml
+  focusedErrorBorder:
+    description: The border to display when the input has the focus and has an error.
+    $ref: ../defs/inputBorder.yml
+  helperMaxLines:
+    description: The maximum number of lines the helper text can use.
+    type: integer
+  helperStyle:
+    description: The style to use for the helper text.
+    $ref: ../defs/textStyle.yml
+  helperText:
+    description: The helper text to display.
+    type: string
+  hintMaxLines:
+    description: The maximum number of lines the hint text can use.
+    type: integer
+  hintStyle:
+    description: The style to use for the hint text.
+    $ref: ../defs/textStyle.yml
+  hintText:
+    description: The hint text to display.
+    type: string
+  hintTextDirection:
+    description: The direction of the hint text.
+    $ref: ../defs/textDirection.yml
+  hoverColor:
+    description: The color to use when the input is hovered.
+    $ref: ../defs/color.yml
+  icon:
+    $ref: ../components/icon.yml
+  iconColor:
+    description: The color for the icon
+    $ref: ../defs/color.yml
+  isCollapsed:
+    description: Whether the decoration is the same size as the input field.
+    type: boolean
+  isDense:
+    description: Whether the decoration is dense.
+    type: boolean
+  label:
+    $ref: ../lenra-component.yml
+  labelStyle:
+    description: The style to use for the label.
+    $ref: ../defs/textStyle.yml
+  labelText:
+    description: The text that describes the input field.
+    type: string
+  prefix:
+    $ref: ../lenra-component.yml
+  prefixIcon:
+    $ref: ../components/icon.yml
+  prefixIconColor:
+    description: the color of the prefixIcon
+    $ref: ../defs/color.yml
+  prefixIconConstraints:
+    description: The constraints for the prefixIcon.
+    $ref: ../defs/boxConstraints.yml
+  prefixStyle:
+    description: The style to use for the prefixText.
+    $ref: ../defs/textStyle.yml
+  prefixText:
+    description: The text to display before the input.
+    type: string
+  semanticCounterText:
+    description: The semantic label for the counterText.
+    type: string
+  suffix:
+    type: object
+  suffixIcon:
+    $ref: ../components/icon.yml
+  suffixIconColor:
+    description: the color of the sufficIcon
+    $ref: ../defs/color.yml
+  suffixIconConstraints:
+    description: The constraints for the suffixIcon.
+    $ref: ../defs/boxConstraints.yml
+  suffixStyle:
+    description: The style to use for the suffixText.
+    $ref: ../defs/textStyle.yml
+  suffixText:
+    description: The text to display after the input.
+    type: string
+additionalProperties: false

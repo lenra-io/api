@@ -1,20 +1,18 @@
-# FILEPATH: /home/taorepoara/lenra/api/components/form.schema.json
+# FILEPATH: /home/taorepoara/lenra/api/components/form.yml
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: components/form.schema.json
+$id: components/form.yml
 title: Form
 description: Element of type Form
-type: component
-properties:
-    type:
-        description: The type of the element
-        enum:
-            - form
-    child:
-        $ref: ../component.schema.json
-    onSubmit:
+allOf:
+  - $ref: ./_abstract.yml
+  - properties:
+      _type:
+        const: form
+      child:
+        $ref: ../lenra-component.yml
+      onSubmit:
         description: Callback when the user submits the form.
-        $ref: ../defs/listener.schema.json
+        $ref: ../defs/listener.yml
 required:
-    - type
-    - child
+  - child
 additionalProperties: false

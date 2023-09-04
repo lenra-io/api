@@ -1,0 +1,15 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: defs/boxDecoration.yml
+title: BoxDecoration
+description: Element of type BoxDecoration
+type: object
+properties:
+  borderRadius:
+    $ref: ../defs/borderRadius.yml
+  boxShadow:
+    $ref: ../defs/boxShadow.yml
+  color:
+    $ref: ../defs/color.yml
+  shape:
+    $ref: ../defs/boxShape.yml
+additionalProperties: false

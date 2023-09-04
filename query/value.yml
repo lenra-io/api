@@ -1,0 +1,10 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: query/value.yml
+title: Value
+description: Value query identifier
+oneOf:
+  - $ref: query/arrayValue.yml
+  - $ref: query/meRef.yml
+  - $ref: query/stringValue.yml
+  - $ref: query/numberValue.yml
+additionalProperties: false

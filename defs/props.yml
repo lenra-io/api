@@ -1,0 +1,5 @@
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: defs/props.yml
+title: Props
+description: Parameters passed to the listener
+type: object

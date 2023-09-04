@@ -1,7 +1,7 @@
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: lenra-component.yml
-title: LenraComponent
+$id: json-component.yml
+title: JsonComponent
 description: Any component
 oneOf:
-  - $ref: defs/listener.yml
-  # - $ref: components/view.schema.json
+  - $ref: components/listener.yml
+  # - $ref: components/view.yml
