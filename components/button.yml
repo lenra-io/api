@@ -1,0 +1,36 @@
+# FILEPATH: /home/taorepoara/lenra/api/components/button.schema.json
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: components/button.schema.json
+title: Button
+description: Element of type Button
+type: component
+properties:
+    type:
+        description: The identifier of the component
+        enum:
+            - button
+    text:
+        description: The value of the text inside the button
+        type: string
+    disabled:
+        description: The button is disabled if true
+        type: boolean
+        default: false
+    size:
+        $ref: ../defs/size.schema.json
+    mainStyle:
+        $ref: ../defs/style.schema.json
+    onPressed:
+        $ref: ../defs/listener.schema.json
+    leftIcon:
+        $ref: ../components/icon.schema.json
+    rightIcon:
+        $ref: ../components/icon.schema.json
+    submit:
+        description: Whether the button is a submit button for a form.
+        type: boolean
+        default: false
+required:
+    - type
+    - text
+additionalProperties: false

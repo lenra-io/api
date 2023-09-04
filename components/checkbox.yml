@@ -1,0 +1,33 @@
+# FILEPATH: /home/taorepoara/lenra/api/components/checkbox.schema.json
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: components/checkbox.schema.json
+title: Checkbox
+description: Element of type Checkbox
+type: component
+properties:
+    type:
+        description: The identifier of the component
+        enum:
+            - checkbox
+    value:
+        description: The default state of the checkbox
+        type: boolean
+    tristate:
+        description: Whether the checkbox can have 3 states.
+        type: boolean
+    onPressed:
+        $ref: ../defs/listener.schema.json
+    style:
+        $ref: ../defs/checkboxStyle.schema.json
+    materialTapTargetSize:
+        $ref: ../defs/materialTapTargetSize.schema.json
+    autofocus:
+        description: Whether the checkbox is focused initially.
+        type: boolean
+    name:
+        description: The name that will be used in the form.
+        type: string
+required:
+    - type
+    - value
+additionalProperties: false

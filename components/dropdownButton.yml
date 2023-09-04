@@ -1,0 +1,31 @@
+# FILEPATH: /home/taorepoara/lenra/api/components/dropdownButton.schema.json
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: components/dropdownButton.schema.json
+title: DropdownButton
+description: Element of type Dropdown Button
+type: component
+properties:
+    type:
+        description: The identifier of the component
+        enum:
+            - dropdownButton
+    text:
+        description: The text of the dropdown button
+        type: string
+    disabled:
+        description: If true, the dropdown button is disabled
+        type: boolean
+        default: false
+    size:
+        $ref: ../defs/size.schema.json
+    mainStyle:
+        $ref: ../defs/style.schema.json
+    child:
+        $ref: ../component.schema.json
+    icon:
+        $ref: ../components/icon.schema.json
+required:
+    - type
+    - text
+    - child
+additionalProperties: false

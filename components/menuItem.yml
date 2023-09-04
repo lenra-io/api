@@ -1,0 +1,30 @@
+# FILEPATH: /home/taorepoara/lenra/api/components/menuItem.schema.json
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: components/menu_item.schema.json
+title: MenuItem
+description: Element of type MenuItem
+type: component
+properties:
+    type:
+        description: The type of the element
+        enum:
+            - menuItem
+    text:
+        description: The text of the element
+        type: string
+    isSelected:
+        description: Whether the element is selected or not.
+        type: boolean
+        default: false
+    disabled:
+        description: Whether the element should be disabled or not.
+        type: boolean
+        default: false
+    icon:
+        $ref: ../components/icon.schema.json
+    onPressed:
+        $ref: ../defs/listener.schema.json
+required:
+    - type
+    - text
+additionalProperties: false

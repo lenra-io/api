@@ -1,0 +1,20 @@
+# FILEPATH: /home/taorepoara/lenra/api/components/menu.schema.json
+$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
+$id: components/menu.schema.json
+title: Menu
+description: Element of type Menu
+type: component
+properties:
+    type:
+        description: The type of the element
+        enum:
+            - menu
+    children:
+        type: array
+        description: The menu items
+        items:
+            $ref: ../component.schema.json
+required:
+    - type
+    - children
+additionalProperties: false
