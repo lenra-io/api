@@ -1,37 +1,35 @@
-# FILEPATH: /home/taorepoara/lenra/api/components/radio.yml
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
 $id: components/radio.yml
 title: Radio
 description: Element of type Radio
-type: object
-properties:
-    _type:
-        description: The type of the element
+allOf:
+  - $ref: ./_abstract.yml
+  - properties:
+      _type:
         const: radio
-    autofocus:
+      autofocus:
         description: Whether the radio will be selected initially.
         type: boolean
-    value:
+      value:
         description: The value of the radio
         type: string
-    groupValue:
+      groupValue:
         description: The value group of the radio
         type: string
-    materialTapTargetSize:
+      materialTapTargetSize:
         description: Configures the minimum size of the tap target.
         $ref: ../defs/materialTapTargetSize.yml
-    onPressed:
+      onPressed:
         $ref: ../defs/listener.yml
-    toggleable:
+      toggleable:
         description: Whether the radio is allowed to go from checked to unchecked when clicking on it.
         type: boolean
-    style:
+      style:
         $ref: ../defs/radioStyle.yml
-    name:
+      name:
         description: The name that will be used in the form.
         type: string
 required:
-    - type
-    - value
-    - groupValue
+  - value
+  - groupValue
 additionalProperties: false

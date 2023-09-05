@@ -2,97 +2,96 @@ $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/pri
 $id: components/textfield.yml
 title: TextField
 description: Element of type TextField
-type: object
-properties:
-  _type:
-    description: The type of the element
-    const: textfield
-  value:
-    description: The value displayed inside the Textfield
-    type: string
-  autocorrect:
-    description: Whether to enable the autocorrection
-    type: boolean
-  autofillHints:
-    description: The type of this text input to provide autofill hints.
-    $ref: ../defs/autofillHints.yml
-  autofocus:
-    description: Whether this Textfield should be focused initially.
-    type: boolean
-  buildCounter:
-    description: Callback that generates a custom counter view.
-    $ref: ../defs/listener.yml
-  style:
-    description: The style of the Textfield.
-    $ref: ../defs/textFieldStyle.yml
-  dragStartBehavior:
-    description: Determines the way that drag start behavior is handled.
-    $ref: ../defs/dragStartBehavior.yml
-  enabled:
-    description: Whether the text field is enabled.
-    type: boolean
-  enableInteractiveSelection:
-    description: Whether to enable user interface options to change the text selection.
-    type: boolean
-  expands:
-    description: Whether the TextField is sized to fill its parent.
-    type: boolean
-  keyboardType:
-    description: The type of the keyboard to use for editing the text.
-    $ref: ../defs/textInputType.yml
-  maxLength:
-    description: The maximum number of characters to allow in the text field.
-    type: integer
-  maxLengthEnforcement:
-    description: Determines how the maxLength limit should be enforced.
-    $ref: ../defs/maxLengthEnforcement.yml
-  maxLines:
-    description: The maximum number of lines to show at one time.
-    type: integer
-  minLines:
-    description: The minimum number of lines to occupy on the screen.
-    type: integer
-  obscureText:
-    description: Whether to hide the text being edited.
-    type: boolean
-  onAppPrivateCommand:
-    description: This is used to receive a private command from the input method.
-    $ref: ../defs/listener.yml
-  onChanged:
-    description: Callback when the user changes the text field value.
-    $ref: ../defs/listener.yml
-  onEditingComplete:
-    description: Callback when the user finishes editing the text field.
-    $ref: ../defs/listener.yml
-  onSubmitted:
-    description: Callback when the user tells he is done editing the text field.
-    $ref: ../defs/listener.yml
-  onTap:
-    description: Callback when the user taps on the text field.
-    $ref: ../defs/listener.yml
-  readOnly:
-    description: Whether the text can be changed.
-    type: boolean
-  showCursor:
-    description: Whether to show the cursor.
-    type: boolean
-  textCapitalization:
-    description: Configures how the platform keyboard will select an uppercase or
-      lowercase keyboard.
-    $ref: ../defs/textCapitalization.yml
-  textDirection:
-    description: The direction of the text.
-    $ref: ../defs/textDirection.yml
-  textInputAction:
-    description: The type of the action button to use for the keyboard.
-    $ref: ../defs/textInputAction.yml
-  toolbarOptions:
-    description: Configuration of toolbar options
-    $ref: ../defs/toolbarOptions.yml
-  name:
-    description: The name that will be used in the form.
-    type: string
+allOf:
+  - $ref: ./_abstract.yml
+  - properties:
+    _type:
+      const: textfield
+    value:
+      description: The value displayed inside the Textfield
+      type: string
+    autocorrect:
+      description: Whether to enable the autocorrection
+      type: boolean
+    autofillHints:
+      description: The type of this text input to provide autofill hints.
+      $ref: ../defs/autofillHints.yml
+    autofocus:
+      description: Whether this Textfield should be focused initially.
+      type: boolean
+    buildCounter:
+      description: Callback that generates a custom counter view.
+      $ref: ../defs/listener.yml
+    style:
+      description: The style of the Textfield.
+      $ref: ../defs/textFieldStyle.yml
+    dragStartBehavior:
+      description: Determines the way that drag start behavior is handled.
+      $ref: ../defs/dragStartBehavior.yml
+    enabled:
+      description: Whether the text field is enabled.
+      type: boolean
+    enableInteractiveSelection:
+      description: Whether to enable user interface options to change the text selection.
+      type: boolean
+    expands:
+      description: Whether the TextField is sized to fill its parent.
+      type: boolean
+    keyboardType:
+      description: The type of the keyboard to use for editing the text.
+      $ref: ../defs/textInputType.yml
+    maxLength:
+      description: The maximum number of characters to allow in the text field.
+      type: integer
+    maxLengthEnforcement:
+      description: Determines how the maxLength limit should be enforced.
+      $ref: ../defs/maxLengthEnforcement.yml
+    maxLines:
+      description: The maximum number of lines to show at one time.
+      type: integer
+    minLines:
+      description: The minimum number of lines to occupy on the screen.
+      type: integer
+    obscureText:
+      description: Whether to hide the text being edited.
+      type: boolean
+    onAppPrivateCommand:
+      description: This is used to receive a private command from the input method.
+      $ref: ../defs/listener.yml
+    onChanged:
+      description: Callback when the user changes the text field value.
+      $ref: ../defs/listener.yml
+    onEditingComplete:
+      description: Callback when the user finishes editing the text field.
+      $ref: ../defs/listener.yml
+    onSubmitted:
+      description: Callback when the user tells he is done editing the text field.
+      $ref: ../defs/listener.yml
+    onTap:
+      description: Callback when the user taps on the text field.
+      $ref: ../defs/listener.yml
+    readOnly:
+      description: Whether the text can be changed.
+      type: boolean
+    showCursor:
+      description: Whether to show the cursor.
+      type: boolean
+    textCapitalization:
+      description: Configures how the platform keyboard will select an uppercase or
+        lowercase keyboard.
+      $ref: ../defs/textCapitalization.yml
+    textDirection:
+      description: The direction of the text.
+      $ref: ../defs/textDirection.yml
+    textInputAction:
+      description: The type of the action button to use for the keyboard.
+      $ref: ../defs/textInputAction.yml
+    toolbarOptions:
+      description: Configuration of toolbar options
+      $ref: ../defs/toolbarOptions.yml
+    name:
+      description: The name that will be used in the form.
+      type: string
 required:
-  - type
   - value
 additionalProperties: false

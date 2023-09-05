@@ -3,47 +3,45 @@ $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/pri
 $id: components/slider.yml
 title: Slider
 description: Element of type Slider
-type: object
-properties:
-    _type:
-        description: The identifier of the component
+allOf:
+  - $ref: ./_abstract.yml
+  - properties:
+      _type:
         const: slider
-    style:
+      style:
         $ref: ../defs/sliderStyle.yml
-    autofocus:
+      autofocus:
         description: Whether the slider should be focused initially.
         type: boolean
         default: false
-    divisions:
+      divisions:
         description: The number of divisions to show on the slider.
         type: number
-    label:
+      label:
         description: The label of the slider.
         type: string
-    min:
+      min:
         description: The minimum value of the slider.
         type: number
         default: 0.0
-    max:
+      max:
         description: The maximum value of the slider.
         type: number
         default: 1.0
-    onChanged:
+      onChanged:
         description: The callback to be invoked when the slider value changes.
         $ref: ../defs/listener.yml
-    onChangeEnd:
+      onChangeEnd:
         description: The callback to be invoked when the slider is released.
         $ref: ../defs/listener.yml
-    onChangeStart:
+      onChangeStart:
         description: The callback to be invoked when the slider is pressed.
         $ref: ../defs/listener.yml
-    value:
+      value:
         description: The current value of the slider.
         type: number
         default: 0.0
-    name:
+      name:
         description: The name that will be used in the form.
         type: string
-required:
-    - type
 additionalProperties: false

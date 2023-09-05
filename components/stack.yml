@@ -3,21 +3,20 @@ $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/pri
 $id: components/stack.yml
 title: Stack
 description: Element of type Stack
-type: object
-properties:
-    _type:
-        description: The identifier of the component
+allOf:
+  - $ref: ./_abstract.yml
+  - properties:
+      _type:
         const: stack
-    children:
+      children:
         description: The children of the Stack.
         type: array
         items:
             $ref: ../lenra-component.yml
-    alignment:
+      alignment:
         $ref: ../defs/alignment.yml
-    fit:
+      fit:
         $ref: ../defs/stackFit.yml
 required:
-    - type
-    - children
+  - children
 additionalProperties: false

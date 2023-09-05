@@ -1,28 +1,26 @@
-# FILEPATH: /home/taorepoara/lenra/api/components/overlayEntry.yml
 $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
 $id: components/overlayEntry.yml
 title: OverlayEntry
 description: Element of type OverlayEntry
-type: object
-properties:
-    _type:
-        description: The identifier of the component
+allOf:
+  - $ref: ./_abstract.yml
+  - properties:
+      _type:
         const: overlayEntry
-    child:
+      child:
         $ref: ../lenra-component.yml
-    maintainState:
+      maintainState:
         description: Whether this entry must be included in the tree even if there is a fully opaque entry above it.
         type: boolean
         default: false
-    opaque:
+      opaque:
         description: Whether this entry occludes the entire overlay.
         type: boolean
         default: false
-    showOverlay:
+      showOverlay:
         description: Whether this entry should be shown.
         type: boolean
         default: false
 required:
-    - type
-    - child
+  - child
 additionalProperties: false

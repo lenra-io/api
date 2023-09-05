@@ -3,17 +3,17 @@ $schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/pri
 $id: components/menu.yml
 title: Menu
 description: Element of type Menu
-type: object
-properties:
-    _type:
+allOf:
+  - $ref: ./_abstract.yml
+  - properties:
+      _type:
         description: The type of the element
         const: menu
-    children:
+      children:
         type: array
         description: The menu items
         items:
-            $ref: ../lenra-component.yml
+          $ref: ../lenra-component.yml
 required:
-    - type
-    - children
+  - children
 additionalProperties: false
