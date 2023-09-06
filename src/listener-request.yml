@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/manifest.yml
+title: ViewRequest
+description: The Lenra application view request
+type: object
+properties:
+  listener: 
+    type: string
+    description: The requested listener name
+  props:
+    $ref: "defs/props.yml"
+  event:
+    description: The event that triggered the listener
+    type: object
+additionalProperties: false
+required:
+- listener

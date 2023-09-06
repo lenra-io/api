@@ -1,0 +1,44 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/defs/carouselOptions.yml
+title: CarouselOptions
+description: Element of type CarouselOptions
+type: object
+properties:
+  height:
+    type: number
+  enlargeCenterPage:
+    type: boolean
+    default: false
+  autoPlay:
+    type: boolean
+    default: false
+  autoPlayInterval:
+    $ref: ../defs/duration.yml
+  autoPlayAnimationDuration:
+    $ref: ../defs/duration.yml
+  pauseAutoPlayOnTouch:
+    type: boolean
+    default: true
+  aspectRatio:
+    type: number
+  initialPage:
+    type: integer
+  enableInfiniteScroll:
+    type: boolean
+    default: true
+  reverse:
+    type: boolean
+    default: false
+  scrollDirection:
+    $ref: ../defs/direction.yml
+  viewportFraction:
+    type: number
+    default: 0.8
+  enlargeStrategy:
+    type: string
+    enum:
+      - scale
+      - height
+      - zoom
+    default: scale
+additionalProperties: false

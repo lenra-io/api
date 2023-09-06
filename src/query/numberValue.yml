@@ -1,0 +1,6 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/query/numberValue.yml
+title: NumberValue
+description: NumberValue query identifier
+type: number
+additionalProperties: false

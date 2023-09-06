@@ -1,0 +1,31 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/checkbox.yml
+title: Checkbox
+description: Element of type Checkbox
+type: object
+properties:
+  lenraType:
+    description: The identifier of the component
+    const: checkbox
+  value:
+    description: The default state of the checkbox
+    type: boolean
+  tristate:
+    description: Whether the checkbox can have 3 states.
+    type: boolean
+  onPressed:
+    $ref: ../defs/listener.yml
+  style:
+    $ref: ../defs/checkboxStyle.yml
+  materialTapTargetSize:
+    $ref: ../defs/materialTapTargetSize.yml
+  autofocus:
+    description: Whether the checkbox is focused initially.
+    type: boolean
+  name:
+    description: The name that will be used in the form.
+    type: string
+required:
+  - lenraType
+  - value
+additionalProperties: false

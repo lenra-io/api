@@ -1,0 +1,38 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/wrap.yml
+title: Wrap
+description: Element of type Wrap
+type: object
+properties:
+  lenraType:
+    description: The identifier of the component
+    const: wrap
+  children:
+    description: The children of the wrap.
+    type: array
+    items:
+      $ref: ../lenra-component.yml
+  direction:
+    $ref: ../defs/direction.yml
+  crossAxisAlignment:
+    $ref: ../defs/wrapCrossAlignment.yml
+  spacing:
+    description: The spacing between each child of the wrap.
+    type: number
+    default: 0
+  runSpacing:
+    description: The spacing between each run of the wrap.
+    type: number
+    default: 0
+  alignment:
+    $ref: ../defs/wrapAlignment.yml
+  runAlignment:
+    $ref: ../defs/wrapAlignment.yml
+  horizontalDirection:
+    $ref: ../defs/textDirection.yml
+  verticalDirection:
+    $ref: ../defs/verticalDirection.yml
+required:
+  - lenraType
+  - children
+additionalProperties: false

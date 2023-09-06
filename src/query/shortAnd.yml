@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/query/shortAnd.yml
+title: ShortAnd
+description: ShortAnd query identifier
+type: object
+properties:
+  $and:
+    $ref: query/and.yml
+patternProperties:
+  ^[a-zA-Z0-9_]+$:
+    oneOf:
+      - $ref: query/value.yml
+      - $ref: query/binaryFunction.yml
+      - $ref: query/shortAndFunctions.yml
+additionalProperties: false

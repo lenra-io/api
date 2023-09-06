@@ -1,0 +1,13 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/defs/wrapAlignment.yml
+title: Wrap Alignment
+description: How the objects in the Wrap should be aligned.
+type: string
+enum:
+  - start
+  - end
+  - center
+  - spaceBetween
+  - spaceAround
+  - spaceEvenly
+default: start

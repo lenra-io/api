@@ -1,0 +1,39 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/toggle.yml
+title: Toggle
+description: Element of type Toggle
+type: object
+properties:
+  lenraType:
+    description: The identifier of the component
+    const: toggle
+  value:
+    description: The value of the element.
+    type: boolean
+  splashRadius:
+    description: The splash radius when you click on the toggle.
+    type: number
+  autofocus:
+    description: The default focus in boolean.
+    type: boolean
+  dragStartBehavior:
+    description: Determines the way that drag start behavior is handled.
+    type: string
+    enum:
+      - start
+      - down
+  onPressed:
+    $ref: ../defs/listener.yml
+  style:
+    $ref: ../defs/toggleStyle.yml
+  name:
+    description: The name that will be used in the form.
+    type: string
+  disabled:
+    description: The toggle is disabled if true
+    type: boolean
+    default: false
+required:
+  - lenraType
+  - value
+additionalProperties: false

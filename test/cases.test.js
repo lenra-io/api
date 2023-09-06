@@ -1,16 +1,36 @@
 import { readFileSync, readdirSync } from 'fs';
-import Ajv from "ajv"
+import YAML from 'yaml';
+import { JsonSchemaUnifier } from '@lenra/json-schema-unifier';
+import { resolve } from 'path';
+import Ajv from 'ajv';
 
-
-const tests = readdirSync('test/cases').filter(f => f.endsWith('.txt'));
+const ajv = new Ajv();
+const compiledSchemata = {};
+const tests = readdirSync('cases').filter(f => f.endsWith('.yml'));
 
 describe("Unify", () => {
-    tests.forEach(test => {
-        it(`should unify ${test}`, async () => {
-            const file = readFileSync(`test/cases/${test}`, 'utf-8');
-            
-            const caseResult = JSON.parse(readFileSync(`test/cases/${test.replace('.txt', '.result.json')}`, 'utf-8'));
-            expect(await result).toEqual(caseResult);
+    tests.forEach(testCase => {
+        it(`Validate ${testCase}`, async () => {
+            const test = YAML.parse(readFileSync(`cases/${testCase}`, 'utf-8'));
+            const schemaPromise = getSchema(resolve("../src", test.schema));
+            const content = JSON.parse(readFileSync(`cases/${testCase.replace(/yml$/, "content.json")}`, 'utf-8'));
+
+            const unifiedSchema = await schemaPromise;
+
+            const validate = ajv.compile(unifiedSchema);
+            const valid = validate(content);
+            expect(YAML.stringify(validate.errors)).toEqual(YAML.stringify(test.errors));
+            expect(valid).toEqual(test.valid);
         });
     });
 });
+
+
+async function getSchema(schemaPath) {
+    if (compiledSchemata[schemaPath]) {
+        return compiledSchemata[schemaPath];
+    }
+    const schema = await JsonSchemaUnifier.unify(schemaPath);
+    compiledSchemata[schemaPath] = schema;
+    return schema;
+}

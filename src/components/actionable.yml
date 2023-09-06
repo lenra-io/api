@@ -1,0 +1,34 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/actionable.yml
+title: Actionable
+description: Element of type Actionable
+type: object
+properties:
+  lenraType:
+    description: The identifier of the component
+    const: listener
+  child:
+    $ref: ../lenra-component.yml
+  onPressed:
+    description: The listener to be called when the actionable is pressed.
+    $ref: ../defs/listener.yml
+  onDoublePressed:
+    description: The listener to be called when the actionable is double pressed.
+    $ref: ../defs/listener.yml
+  onLongPressed:
+    description: The listener to be called when the actionable is long pressed.
+    $ref: ../defs/listener.yml
+  onPressedCancel:
+    description: The listener to be called when the actionable is pressed inside and released outside of the actionable, causing it to cancel the press action.
+    $ref: ../defs/listener.yml
+  onHovered:
+    description: The listener to be called when the actionable is hovered and when the mouse exits the hoverable area.
+    $ref: ../defs/listener.yml
+  submit:
+    description: Whether the actionable can submit a form.
+    type: boolean
+    default: false
+required:
+  - lenraType
+  - child
+additionalProperties: false

@@ -1,0 +1,26 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/defs/borderRadius.yml
+title: BorderRadius
+description: Element of type BorderRadius
+type: object
+properties:
+  topLeft:
+    $ref: "#/definitions/radiusType"
+  topRight:
+    $ref: "#/definitions/radiusType"
+  bottomLeft:
+    $ref: "#/definitions/radiusType"
+  bottomRight:
+    $ref: "#/definitions/radiusType"
+additionalProperties: false
+definitions:
+  radiusType:
+    type: object
+    properties:
+      x:
+        type: number
+        default: 0
+      y:
+        type: number
+        default: 0
+    additionalProperties: false

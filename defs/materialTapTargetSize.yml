@@ -1,9 +1,0 @@
-$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: defs/materialTapTargetSize.yml
-title: Material Tap Target Size
-description: Element of type MaterialTapTargetSize
-type: string
-enum:
-  - shrinkWrap
-  - padded
-additionalProperties: false

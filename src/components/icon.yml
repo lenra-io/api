@@ -1,0 +1,40 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/icon.yml
+title: Icon
+description: The Icon to use
+type: object
+properties:
+  lenraType:
+    description: The identifier of the component
+    const: icon
+  size:
+    description: The size of the Icon
+    type: number
+    default: 24
+  color:
+    description: The color of the Icon. If not set or null, the color is inherited from the theme.
+    $ref: ../defs/color.yml
+    default: null
+  semanticLabel:
+    description: The semantic label for the Icon. This will be announced when using accessibility mode.
+    type: string
+    default: null
+  value:
+    description: The value of the Icon
+    $ref: ../defs/iconName.yml
+  style:
+    $ref: '#/definitions/iconStyle'
+additionalProperties: false
+required:
+  - lenraType
+  - value
+definitions:
+  iconStyle:
+    type: string
+    description: The style of the Icon
+    enum:
+      - filled
+      - sharp
+      - rounded
+      - outlined
+    default: filled

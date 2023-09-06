@@ -1,0 +1,11 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/query/contains.yml
+title: Contains
+description: Contains query identifier
+type: object
+properties:
+  $contains:
+    type: array
+    items:
+      $ref: query/value.yml
+additionalProperties: false

@@ -10,7 +10,7 @@
             "name": "home"
         }
     ],
-    "direction": "vertical",
+    "direction": "verticale",
     "scroll": true,
     "spacing": 4,
     "crossAxisAlignment": "center"

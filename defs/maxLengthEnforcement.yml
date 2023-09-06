@@ -1,9 +1,0 @@
-$schema: https://raw.githubusercontent.com/lenra-io/ex_component_schema/beta/priv/static/draft-lenra.json
-$id: defs/maxLengthEnforcement.yml
-title: MaxLengthEnforcement
-description: Component of type MaxLengthEnforcement.
-type: string
-enum:
-  - none
-  - enforced
-  - truncateAfterCompositionEnds

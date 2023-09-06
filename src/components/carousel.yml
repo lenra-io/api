@@ -1,0 +1,20 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/carousel.yml
+title: Carousel
+description: Element of type Carousel
+type: object
+properties:
+  lenraType:
+    description: The identifier of the component
+    const: carousel
+  children:
+    description: The children
+    type: array
+    items:
+        $ref: ../lenra-component.yml
+  options:
+    $ref: ../defs/carouselOptions.yml
+required:
+  - lenraType
+  - children
+additionalProperties: false
