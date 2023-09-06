@@ -22,6 +22,7 @@ definitions:
     properties:
       version: 
         type: string
+        description: The exposer API version
       routes: 
         description: The routes of the application for this exposer
         type: array
