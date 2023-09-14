@@ -11,19 +11,19 @@ properties:
     $ref: ../lenra-component.yml
   onPressed:
     description: The listener to be called when the actionable is pressed.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onDoublePressed:
     description: The listener to be called when the actionable is double pressed.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onLongPressed:
     description: The listener to be called when the actionable is long pressed.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onPressedCancel:
     description: The listener to be called when the actionable is pressed inside and released outside of the actionable, causing it to cancel the press action.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onHovered:
     description: The listener to be called when the actionable is hovered and when the mouse exits the hoverable area.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   submit:
     description: Whether the actionable can submit a form.
     type: boolean

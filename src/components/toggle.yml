@@ -23,7 +23,7 @@ properties:
       - start
       - down
   onPressed:
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   style:
     $ref: ../defs/toggleStyle.yml
   name:

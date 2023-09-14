@@ -19,7 +19,7 @@ properties:
   mainStyle:
     $ref: ../defs/style.yml
   onPressed:
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   leftIcon:
     $ref: ../components/icon.yml
   rightIcon:

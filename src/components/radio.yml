@@ -20,7 +20,7 @@ properties:
     description: Configures the minimum size of the tap target.
     $ref: ../defs/materialTapTargetSize.yml
   onPressed:
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   toggleable:
     description: Whether the radio is allowed to go from checked to unchecked when clicking on it.
     type: boolean

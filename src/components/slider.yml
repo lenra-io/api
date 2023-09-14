@@ -30,13 +30,13 @@ properties:
     default: 1.0
   onChanged:
     description: The callback to be invoked when the slider value changes.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onChangeEnd:
     description: The callback to be invoked when the slider is released.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onChangeStart:
     description: The callback to be invoked when the slider is pressed.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   value:
     description: The current value of the slider.
     type: number
