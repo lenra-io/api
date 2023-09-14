@@ -14,7 +14,7 @@ properties:
     description: Whether the checkbox can have 3 states.
     type: boolean
   onPressed:
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   style:
     $ref: ../defs/checkboxStyle.yml
   materialTapTargetSize:

@@ -21,7 +21,7 @@ properties:
   icon:
     $ref: ../components/icon.yml
   onPressed:
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
 required:
   - _type
   - text

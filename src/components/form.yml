@@ -12,7 +12,7 @@ properties:
     $ref: ../lenra-component.yml
   onSubmit:
     description: Callback when the user submits the form.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
 required:
   - _type
   - child

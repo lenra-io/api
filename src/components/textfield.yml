@@ -21,7 +21,7 @@ properties:
     type: boolean
   buildCounter:
     description: Callback that generates a custom counter view.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   style:
     description: The style of the Textfield.
     $ref: ../defs/textFieldStyle.yml
@@ -57,19 +57,19 @@ properties:
     type: boolean
   onAppPrivateCommand:
     description: This is used to receive a private command from the input method.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onChanged:
     description: Callback when the user changes the text field value.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onEditingComplete:
     description: Callback when the user finishes editing the text field.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onSubmitted:
     description: Callback when the user tells he is done editing the text field.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   onTap:
     description: Callback when the user taps on the text field.
-    $ref: ../defs/listener.yml
+    $ref: ./listener.yml
   readOnly:
     description: Whether the text can be changed.
     type: boolean
