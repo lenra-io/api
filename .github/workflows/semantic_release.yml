@@ -28,7 +28,6 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npm run build
-      - run: 
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
