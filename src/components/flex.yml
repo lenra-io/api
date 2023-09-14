@@ -5,7 +5,7 @@ title: Flex
 description: Element of type Flex
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: flex
   children:
@@ -57,6 +57,6 @@ properties:
   textBaseline:
     $ref: ../defs/textBaseline.yml
 required:
-  - lenraType
+  - _type
   - children
 additionalProperties: false

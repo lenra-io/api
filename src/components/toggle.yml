@@ -4,7 +4,7 @@ title: Toggle
 description: Element of type Toggle
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: toggle
   value:
@@ -34,6 +34,6 @@ properties:
     type: boolean
     default: false
 required:
-  - lenraType
+  - _type
   - value
 additionalProperties: false

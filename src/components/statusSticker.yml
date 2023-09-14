@@ -4,7 +4,7 @@ title: StatusSticker
 description: Element of type StatusSticker
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: statusSticker
   status:
@@ -16,6 +16,6 @@ properties:
       - error
       - pending
 required:
-  - lenraType
+  - _type
   - status
 additionalProperties: false

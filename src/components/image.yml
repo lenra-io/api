@@ -4,7 +4,7 @@ title: Image
 description: Element of type Image
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: image
   src:
@@ -56,6 +56,6 @@ properties:
     description: A semantic description of the image. This is used for TalkBack on Android and VoiceOver on IOS.
     type: string
 required:
-  - lenraType
+  - _type
   - src
 additionalProperties: false

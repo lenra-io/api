@@ -5,7 +5,7 @@ title: Form
 description: Element of type Form
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: form
   child:
@@ -14,6 +14,6 @@ properties:
     description: Callback when the user submits the form.
     $ref: ../defs/listener.yml
 required:
-  - lenraType
+  - _type
   - child
 additionalProperties: false

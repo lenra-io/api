@@ -5,8 +5,8 @@ type: object
 allOf:
   - $ref: ../defs/listener.yml
   - properties:
-      lenraType:
+      _type:
         const: listener
 required:
-  - lenraType
+  - _type
 additionalProperties: false

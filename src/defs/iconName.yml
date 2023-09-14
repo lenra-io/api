@@ -977,7 +977,7 @@ enum:
   - menu
   - menu_book
   - menu_open
-  - mergelenraType
+  - merge_type
   - message
   - messenger
   - messenger_outline

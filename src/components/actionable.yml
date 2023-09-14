@@ -4,7 +4,7 @@ title: Actionable
 description: Element of type Actionable
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: listener
   child:
@@ -29,6 +29,6 @@ properties:
     type: boolean
     default: false
 required:
-  - lenraType
+  - _type
   - child
 additionalProperties: false

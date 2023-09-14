@@ -4,7 +4,7 @@ title: View
 description: Element of type view
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: view
   name:
@@ -29,6 +29,6 @@ properties:
       that specifies the desired elements to be included in the projection.
     type: object
 required:
-  - lenraType
+  - _type
   - name
 additionalProperties: false

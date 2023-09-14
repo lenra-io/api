@@ -4,7 +4,7 @@ title: MenuItem
 description: Element of type MenuItem
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: menuItem
   text:
@@ -23,6 +23,6 @@ properties:
   onPressed:
     $ref: ../defs/listener.yml
 required:
-  - lenraType
+  - _type
   - text
 additionalProperties: false

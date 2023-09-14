@@ -4,7 +4,7 @@ title: TextField
 description: Element of type TextField
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: textfield
   value:
@@ -93,6 +93,6 @@ properties:
     description: The name that will be used in the form.
     type: string
 required:
-  - lenraType
+  - _type
   - value
 additionalProperties: false

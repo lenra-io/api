@@ -4,7 +4,7 @@ title: Checkbox
 description: Element of type Checkbox
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: checkbox
   value:
@@ -26,6 +26,6 @@ properties:
     description: The name that will be used in the form.
     type: string
 required:
-  - lenraType
+  - _type
   - value
 additionalProperties: false

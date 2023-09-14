@@ -5,7 +5,7 @@ title: Stack
 description: Element of type Stack
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: stack
   children:
@@ -18,6 +18,6 @@ properties:
   fit:
     $ref: ../defs/stackFit.yml
 required:
-  - lenraType
+  - _type
   - children
 additionalProperties: false

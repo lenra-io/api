@@ -5,7 +5,7 @@ title: Flexible
 description: Element of type Flexible
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: flexible
   flex:
@@ -17,6 +17,6 @@ properties:
   child:
     $ref: ../lenra-component.yml
 required:
-  - lenraType
+  - _type
   - child
 additionalProperties: false

@@ -4,14 +4,14 @@
             {
                 "path": "/",
                 "view": {
-                    "lenraType": "view",
+                    "_type": "view",
                     "name": "home"
                 }
             },
             {
                 "path": "/me",
                 "view": {
-                    "lenraType": "view",
+                    "_type": "view",
                     "name": "home",
                     "find": {
                         "coll": "favorites",

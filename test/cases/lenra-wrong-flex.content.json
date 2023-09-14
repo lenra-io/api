@@ -1,12 +1,12 @@
 {
-    "lenraType": "flex",
+    "_type": "flex",
     "children": [
         {
-            "lenraType": "view",
+            "_type": "view",
             "name": "menu"
         },
         {
-            "lenraType": "view",
+            "_type": "view",
             "name": "home"
         }
     ],

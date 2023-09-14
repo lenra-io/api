@@ -4,7 +4,7 @@ title: Carousel
 description: Element of type Carousel
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: carousel
   children:
@@ -15,6 +15,6 @@ properties:
   options:
     $ref: ../defs/carouselOptions.yml
 required:
-  - lenraType
+  - _type
   - children
 additionalProperties: false

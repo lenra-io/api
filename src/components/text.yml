@@ -4,7 +4,7 @@ title: Text
 description: Element of type Text
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: text
   value:
@@ -37,6 +37,6 @@ properties:
     items:
       $ref: text.yml
 required:
-  - lenraType
+  - _type
   - value
 additionalProperties: false

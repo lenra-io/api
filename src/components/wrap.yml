@@ -4,7 +4,7 @@ title: Wrap
 description: Element of type Wrap
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: wrap
   children:
@@ -33,6 +33,6 @@ properties:
   verticalDirection:
     $ref: ../defs/verticalDirection.yml
 required:
-  - lenraType
+  - _type
   - children
 additionalProperties: false

@@ -4,7 +4,7 @@ title: OverlayEntry
 description: Element of type OverlayEntry
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: overlayEntry
   child:
@@ -22,6 +22,6 @@ properties:
     type: boolean
     default: false
 required:
-  - lenraType
+  - _type
   - child
 additionalProperties: false

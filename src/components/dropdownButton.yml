@@ -5,7 +5,7 @@ title: DropdownButton
 description: Element of type Dropdown Button
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: dropdownButton
   text:
@@ -24,7 +24,7 @@ properties:
   icon:
     $ref: ../components/icon.yml
 required:
-  - lenraType
+  - _type
   - text
   - child
 additionalProperties: false

@@ -4,7 +4,7 @@ title: Icon
 description: The Icon to use
 type: object
 properties:
-  lenraType:
+  _type:
     description: The identifier of the component
     const: icon
   size:
@@ -26,7 +26,7 @@ properties:
     $ref: '#/definitions/iconStyle'
 additionalProperties: false
 required:
-  - lenraType
+  - _type
   - value
 definitions:
   iconStyle:
