@@ -6,7 +6,7 @@ type: object
 properties:
   _type:
     description: The identifier of the component
-    const: listener
+    const: actionable
   child:
     $ref: ../lenra-component.yml
   onPressed:
