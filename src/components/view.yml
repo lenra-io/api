@@ -15,14 +15,6 @@ properties:
   find:
     description: Find query.
     $ref: ../defs/find.yml
-  query:
-    description: The query to apply to the data.
-    type: object
-    deprecated: true
-  coll:
-    description: the collection where the query is applied
-    type: string
-    deprecated: true
   context:
     description: The context projection. This field represents the projection of the
       context, allowing selective retrieval of specific elements. It is a map
