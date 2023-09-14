@@ -15,7 +15,7 @@ if (!fs.existsSync(distPath)) {
 // Pour chaque fichier, unifier les schema en un seul fichier
 files.forEach(async file => {
     const filePath = path.resolve(srcPath, file);
-    const distFilePath = path.resolve(distPath, file);
+    const distFilePath = path.resolve(distPath, file.replace(/\.ya?ml$/, ".schema.json"));
     const schema = await JsonSchemaUnifier.unify(filePath);
     fs.writeFileSync(distFilePath, JSON.stringify(schema, null, 2));
 });
