@@ -1,0 +1,19 @@
+# FILEPATH: /home/taorepoara/lenra/api/components/menu.yml
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/menu.yml
+title: Menu
+description: Element of type Menu
+type: object
+properties:
+  _type:
+    description: The identifier of the component
+    const: menu
+  children:
+    type: array
+    description: The menu items
+    items:
+      $ref: ../lenra-component.yml
+required:
+  - _type
+  - children
+additionalProperties: false

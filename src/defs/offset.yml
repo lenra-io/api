@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/defs/offset.yml
+title: Offset
+description: Element of type Offset
+type: object
+properties:
+  dx:
+    description: The Offset along the x axis
+    type: number
+    default: 0
+  dy:
+    description: The Offset along the y axis
+    type: number
+    default: 0
+additionalProperties: false

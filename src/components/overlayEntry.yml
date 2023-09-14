@@ -1,0 +1,27 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/overlayEntry.yml
+title: OverlayEntry
+description: Element of type OverlayEntry
+type: object
+properties:
+  _type:
+    description: The identifier of the component
+    const: overlayEntry
+  child:
+    $ref: ../lenra-component.yml
+  maintainState:
+    description: Whether this entry must be included in the tree even if there is a fully opaque entry above it.
+    type: boolean
+    default: false
+  opaque:
+    description: Whether this entry occludes the entire overlay.
+    type: boolean
+    default: false
+  showOverlay:
+    description: Whether this entry should be shown.
+    type: boolean
+    default: false
+required:
+  - _type
+  - child
+additionalProperties: false

@@ -1,0 +1,62 @@
+# FILEPATH: /home/taorepoara/lenra/api/components/flex.yml
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/flex.yml
+title: Flex
+description: Element of type Flex
+type: object
+properties:
+  _type:
+    description: The identifier of the component
+    const: flex
+  children:
+    description: The children
+    type: array
+    items:
+      $ref: ../lenra-component.yml
+  direction:
+    $ref: ../defs/direction.yml
+  mainAxisAlignment:
+    description: The alignment along the main axis
+    type: string
+    enum:
+      - start
+      - end
+      - center
+      - spaceBetween
+      - spaceAround
+      - spaceEvenly
+    default: start
+  crossAxisAlignment:
+    description: The alignment along the cross axis
+    type: string
+    enum:
+      - start
+      - end
+      - center
+      - stretch
+      - baseline
+    default: start
+  spacing:
+    description: The multiplier of the base size for the minimal spacing
+    type: number
+    default: 0
+  fillParent:
+    description: if true the flex will fill the main axis. Otherwise it will take the children size.
+    type: boolean
+    default: false
+  scroll:
+    description: If true the flex will scroll if there is too many item in the Main Axis.
+    type: boolean
+    default: false
+  padding:
+    $ref: ../defs/padding.yml
+  horizontalDirection:
+    $ref: ../defs/textDirection.yml
+  verticalDirection:
+    $ref: ../defs/verticalDirection.yml
+  textBaseline:
+    $ref: ../defs/textBaseline.yml
+required:
+  - _type
+  - children
+additionalProperties: false

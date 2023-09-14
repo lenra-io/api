@@ -1,0 +1,7 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/json-component.yml
+title: JsonComponent
+description: Any component
+oneOf:
+  - $ref: components/listener.yml
+  # - $ref: components/view.yml

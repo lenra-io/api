@@ -1,0 +1,35 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/manifest.yml
+title: ViewRequest
+description: The Lenra application view request
+type: object
+properties:
+  view: 
+    type: string
+    description: The requested view name
+  data: 
+    description: The JSON exposer definition of the application
+    $ref: "#/definitions/data"
+  props:
+    $ref: "defs/props.yml"
+  context:
+    description: The context of current the view rendering
+    type: object
+additionalProperties: false
+required:
+- view
+definitions:
+  data: 
+    oneOf:
+    - $ref: "#/definitions/document"
+    - type: array
+      items:
+        $ref: "#/definitions/document"
+  document: 
+    type: object
+    properties:
+      _id: 
+        type: string
+    required:
+    - _id
+    additionalProperties: true

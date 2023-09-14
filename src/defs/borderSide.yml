@@ -1,0 +1,13 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/defs/borderSide.yml
+title: BorderSide
+description: Element of type BorderSide
+type: object
+properties:
+  width:
+    description: The width of the Border
+    type: number
+    default: 1
+  color:
+    $ref: ../defs/color.yml
+additionalProperties: false

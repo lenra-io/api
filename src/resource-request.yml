@@ -1,0 +1,12 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/manifest.yml
+title: ResourceRequest
+description: The Lenra application resource request
+type: object
+properties:
+  resource: 
+    type: string
+    description: The requested resource identifier (could be a name, a path or whatever you want to use as identifier)
+additionalProperties: false
+required:
+- resource

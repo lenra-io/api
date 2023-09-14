@@ -1,0 +1,26 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/view.yml
+title: View
+description: Element of type view
+type: object
+properties:
+  _type:
+    description: The identifier of the component
+    const: view
+  name:
+    description: The name of the view
+    type: string
+  props:
+    $ref: ../defs/props.yml
+  find:
+    description: Find query.
+    $ref: ../defs/find.yml
+  context:
+    description: The context projection. This field represents the projection of the
+      context, allowing selective retrieval of specific elements. It is a map
+      that specifies the desired elements to be included in the projection.
+    type: object
+required:
+  - _type
+  - name
+additionalProperties: false

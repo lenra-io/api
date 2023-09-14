@@ -1,0 +1,19 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/defs/textInputAction.yml
+title: TextInputAction
+description: Component of type TextInputAction.
+type: string
+enum:
+  - continueAction
+  - done
+  - emergencyCall
+  - go
+  - join
+  - newline
+  - next
+  - none
+  - previous
+  - route
+  - search
+  - send
+  - unspecified
