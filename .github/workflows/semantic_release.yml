@@ -1,0 +1,43 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+      - rc
+      - beta
+      - alpha
+      - "*.x"
+
+jobs:
+  get-next-version:
+    uses: lenra-io/github-actions/.github/workflows/get-version.yml@main
+  generate-artifacts:
+    name: Generate artifacts
+    needs: [get-next-version]
+    if: ${{ needs.get-next-version.outputs.will-release == 'true' }}
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ needs.get-next-version.outputs.version }}
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm run build
+      - run: 
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          path: dist/*
+  release:
+    needs: [generate-artifacts]
+    if: ${{ needs.get-next-version.outputs.will-release == 'true' }}
+    uses: lenra-io/github-actions/.github/workflows/release.yml@main
+    with:
+      download-artifacts: true
+      assets: artifacts/
+  
