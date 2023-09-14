@@ -1,0 +1,26 @@
+{
+    "lenra": {
+        "routes": [
+            {
+                "path": "/",
+                "view": {
+                    "_type": "view",
+                    "name": "home"
+                }
+            },
+            {
+                "path": "/me",
+                "view": {
+                    "_type": "view",
+                    "name": "home",
+                    "find": {
+                        "coll": "favorites",
+                        "query": {
+                            "user": "@me"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

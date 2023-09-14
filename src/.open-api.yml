@@ -1,0 +1,33 @@
+openapi: 3.1.0
+info:
+  title: Lenra App API
+  description: Lenra App API documentation
+  license:
+    name: MIT
+  version: 0.0.0
+  contact:
+    name: Lenra
+    url: https://www.lenra.io/contact.html
+servers:
+- url: "https://api.lenra.io"
+  description: Production server
+tags:
+  - name: public
+    description: Public endpoints used by the Lenra apps client and the backoffice
+  - name: app
+    description: Application endpoints used by the Lenra apps
+  - name: internal
+    description: Internal use only
+paths:
+  "/health":
+    get:
+      summary: Healthcheck
+      operationId: healthcheck
+      description: Healthcheck for the Lenra server, indicates if the server is running and available
+      tags:
+        - internal
+      responses:
+        '200':
+          description: Healthy
+        '500':
+          description: Not healthy

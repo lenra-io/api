@@ -1,0 +1,19 @@
+# FILEPATH: /home/taorepoara/lenra/api/components/form.yml
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/form.yml
+title: Form
+description: Element of type Form
+type: object
+properties:
+  _type:
+    description: The identifier of the component
+    const: form
+  child:
+    $ref: ../lenra-component.yml
+  onSubmit:
+    description: Callback when the user submits the form.
+    $ref: ../defs/listener.yml
+required:
+  - _type
+  - child
+additionalProperties: false

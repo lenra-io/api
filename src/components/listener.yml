@@ -1,0 +1,12 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/listener.yml
+title: Listener
+type: object
+allOf:
+  - $ref: ../defs/listener.yml
+  - properties:
+      _type:
+        const: listener
+required:
+  - _type
+additionalProperties: false

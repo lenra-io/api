@@ -1,0 +1,23 @@
+# FILEPATH: /home/taorepoara/lenra/api/components/stack.yml
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/stack.yml
+title: Stack
+description: Element of type Stack
+type: object
+properties:
+  _type:
+    description: The identifier of the component
+    const: stack
+  children:
+    description: The children of the Stack.
+    type: array
+    items:
+        $ref: ../lenra-component.yml
+  alignment:
+    $ref: ../defs/alignment.yml
+  fit:
+    $ref: ../defs/stackFit.yml
+required:
+  - _type
+  - children
+additionalProperties: false

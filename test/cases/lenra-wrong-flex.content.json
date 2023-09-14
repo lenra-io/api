@@ -1,0 +1,17 @@
+{
+    "_type": "flex",
+    "children": [
+        {
+            "_type": "view",
+            "name": "menu"
+        },
+        {
+            "_type": "view",
+            "name": "home"
+        }
+    ],
+    "direction": "verticale",
+    "scroll": true,
+    "spacing": 4,
+    "crossAxisAlignment": "center"
+}

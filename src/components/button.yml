@@ -1,0 +1,34 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/button.yml
+title: Button
+description: Element of type Button
+type: object
+properties:
+  _type:
+    description: The identifier of the component
+    const: button
+  text:
+    description: The value of the text inside the button
+    type: string
+  disabled:
+    description: The button is disabled if true
+    type: boolean
+    default: false
+  size:
+    $ref: ../defs/size.yml
+  mainStyle:
+    $ref: ../defs/style.yml
+  onPressed:
+    $ref: ../defs/listener.yml
+  leftIcon:
+    $ref: ../components/icon.yml
+  rightIcon:
+    $ref: ../components/icon.yml
+  submit:
+    description: Whether the button is a submit button for a form.
+    type: boolean
+    default: false
+required:
+  - _type
+  - text
+additionalProperties: false

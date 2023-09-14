@@ -1,0 +1,149 @@
+schema: lenra-component.yml
+valid: false
+errors:
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: child
+  message: must have required property 'child'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: text
+  message: must have required property 'text'
+- instancePath: ""
+  schemaPath: "#/additionalProperties"
+  keyword: additionalProperties
+  params:
+    additionalProperty: direction
+  message: must NOT have additional properties
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: value
+  message: must have required property 'value'
+- instancePath: ""
+  schemaPath: "#/additionalProperties"
+  keyword: additionalProperties
+  params:
+    additionalProperty: children
+  message: must NOT have additional properties
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: text
+  message: must have required property 'text'
+- instancePath: /direction
+  schemaPath: "#/definitions/defs/direction/enum"
+  keyword: enum
+  params:
+    allowedValues:
+      - horizontal
+      - vertical
+  message: must be equal to one of the allowed values
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: child
+  message: must have required property 'child'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: child
+  message: must have required property 'child'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: value
+  message: must have required property 'value'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: src
+  message: must have required property 'src'
+- instancePath: ""
+  schemaPath: "#/additionalProperties"
+  keyword: additionalProperties
+  params:
+    additionalProperty: direction
+  message: must NOT have additional properties
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: text
+  message: must have required property 'text'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: child
+  message: must have required property 'child'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: value
+  message: must have required property 'value'
+- instancePath: ""
+  schemaPath: "#/additionalProperties"
+  keyword: additionalProperties
+  params:
+    additionalProperty: children
+  message: must NOT have additional properties
+- instancePath: ""
+  schemaPath: "#/additionalProperties"
+  keyword: additionalProperties
+  params:
+    additionalProperty: direction
+  message: must NOT have additional properties
+- instancePath: ""
+  schemaPath: "#/definitions/components/statusSticker/required"
+  keyword: required
+  params:
+    missingProperty: status
+  message: must have required property 'status'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: value
+  message: must have required property 'value'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: value
+  message: must have required property 'value'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: value
+  message: must have required property 'value'
+- instancePath: ""
+  schemaPath: "#/required"
+  keyword: required
+  params:
+    missingProperty: name
+  message: must have required property 'name'
+- instancePath: ""
+  schemaPath: "#/additionalProperties"
+  keyword: additionalProperties
+  params:
+    additionalProperty: scroll
+  message: must NOT have additional properties
+- instancePath: ""
+  schemaPath: "#/oneOf"
+  keyword: oneOf
+  params:
+    passingSchemas: null
+  message: must match exactly one schema in oneOf
