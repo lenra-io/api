@@ -10,5 +10,5 @@ properties:
   props:
     $ref: "./props.yml"
 required:
-  - action
+  - name
 additionalProperties: false
