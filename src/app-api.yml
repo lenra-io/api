@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.1.0
 info:
   title: Lenra App API
   description: Lenra App API documentation
@@ -7,7 +7,10 @@ info:
   version: 0.0.0
   contact:
     name: Lenra
-    url: https://www.lenra.io/contact.html
+    url: https://www.lenra.io/contact.
+servers:
+- url: 'http://localhost:8080'
+  description: Exposed devtool app
 paths:
   "/*":
     post:
@@ -34,7 +37,7 @@ paths:
           description: Unexpected app error
 components:
   schemas:
-    reponse:
+    response:
       oneOf:
         - $ref: "view-response.yml"
         - $ref: "#/components/schemas/listener-response"
