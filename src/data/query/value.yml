@@ -1,0 +1,7 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/data/query/value.yml
+title: Value
+description: Value query identifier
+oneOf:
+  - $ref: ../meRef.yml
+  # TODO: add all data types

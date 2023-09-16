@@ -1,0 +1,6 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/data/projection.yml
+title: Projection
+description: Mongo data query projection
+type: object
+additionalProperties: true
