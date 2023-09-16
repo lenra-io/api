@@ -35,7 +35,8 @@ paths:
             schema:
               type: string
         responses:
-          '200': {}
+          '200':
+            description: Collection deleted
     "/app-api/v1/data/colls/{coll}/docs":
       get:
         tags:
