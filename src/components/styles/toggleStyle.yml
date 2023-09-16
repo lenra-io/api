@@ -1,0 +1,28 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/styles/toggleStyle.yml.yml
+title: ToggleStyle
+description: Element of type ToggleStyle
+type: object
+properties:
+  activeColor:
+    $ref: color.yml
+  activeTrackColor:
+    $ref: color.yml
+  inactiveTrackColor:
+    $ref: color.yml
+  inactiveThumbColor:
+    $ref: color.yml
+  hoverColor:
+    $ref: color.yml
+  focusColor:
+    $ref: color.yml
+  activeThumbImage:
+    $ref: ../image.yml
+  inactiveThumbImage:
+    $ref: ../image.yml
+  materialTapTargetSize:
+    type: string
+    enum:
+      - padded
+      - shrinkWrap
+additionalProperties: false

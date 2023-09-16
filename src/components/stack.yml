@@ -14,9 +14,9 @@ properties:
     items:
         $ref: ../lenra-component.yml
   alignment:
-    $ref: ../defs/alignment.yml
+    $ref: styles/alignment.yml
   fit:
-    $ref: ../defs/stackFit.yml
+    $ref: styles/stackFit.yml
 required:
   - _type
   - children

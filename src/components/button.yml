@@ -15,15 +15,15 @@ properties:
     type: boolean
     default: false
   size:
-    $ref: ../defs/size.yml
+    $ref: styles/size.yml
   mainStyle:
-    $ref: ../defs/style.yml
+    $ref: styles/style.yml
   onPressed:
     $ref: ./listener.yml
   leftIcon:
-    $ref: ../components/icon.yml
+    $ref: icon.yml
   rightIcon:
-    $ref: ../components/icon.yml
+    $ref: icon.yml
   submit:
     description: Whether the button is a submit button for a form.
     type: boolean

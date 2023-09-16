@@ -1,0 +1,8 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/styles/brightness.yml.yml
+title: Brightness
+description: Component of type Brightness.
+type: string
+enum:
+  - dark
+  - light

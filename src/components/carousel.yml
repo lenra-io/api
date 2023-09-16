@@ -13,7 +13,7 @@ properties:
     items:
         $ref: ../lenra-component.yml
   options:
-    $ref: ../defs/carouselOptions.yml
+    $ref: styles/carouselOptions.yml
 required:
   - _type
   - children

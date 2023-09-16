@@ -1,9 +1,0 @@
-$schema: http://json-schema.org/draft-07/schema
-$id: https://app.lenra.io/defs/floatingLabelBehavior.yml
-title: FloatingLabelBehavior
-description: Element of type FloatingLabelBehavior.
-type: string
-enum:
-  - always
-  - auto
-  - never

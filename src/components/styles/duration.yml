@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/styles/duration.yml.yml
+title: Duration
+description: Element of type Duration
+type: object
+properties:
+  days:
+    type: integer
+    default: 0
+  hours:
+    type: integer
+    default: 0
+  minutes:
+    type: integer
+    default: 0
+  seconds:
+    type: integer
+    default: 0
+  milliseconds:
+    type: integer
+    default: 0
+  microseconds:
+    type: integer
+    default: 0
+additionalProperties: false

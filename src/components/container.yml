@@ -11,15 +11,15 @@ properties:
   child:
     $ref: ../lenra-component.yml
   alignment:
-    $ref: ../defs/alignment.yml
+    $ref: styles/alignment.yml
   border:
-    $ref: ../defs/border.yml
+    $ref: styles/border.yml
   padding:
-    $ref: ../defs/padding.yml
+    $ref: styles/padding.yml
   constraints:
-    $ref: ../defs/boxConstraints.yml
+    $ref: styles/boxConstraints.yml
   decoration:
-    $ref: ../defs/boxDecoration.yml
+    $ref: styles/boxDecoration.yml
 required:
   - _type
 additionalProperties: false

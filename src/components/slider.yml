@@ -9,7 +9,7 @@ properties:
     description: The identifier of the component
     const: slider
   style:
-    $ref: ../defs/sliderStyle.yml
+    $ref: styles/sliderStyle.yml
   autofocus:
     description: Whether the slider should be focused initially.
     type: boolean

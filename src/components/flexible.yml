@@ -13,7 +13,7 @@ properties:
     type: integer
     default: 1
   fit:
-    $ref: ../defs/flexFit.yml
+    $ref: styles/flexFit.yml
   child:
     $ref: ../lenra-component.yml
 required:

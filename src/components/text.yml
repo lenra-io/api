@@ -11,9 +11,9 @@ properties:
     description: the value displayed in the element
     type: string
   style:
-    $ref: ../defs/textStyle.yml
+    $ref: styles/textStyle.yml
   locale:
-    $ref: ../defs/locale.yml
+    $ref: styles/locale.yml
   semanticsLabel:
     description: The value to explain a different semantics
     type: string

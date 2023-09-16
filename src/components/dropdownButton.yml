@@ -16,13 +16,13 @@ properties:
     type: boolean
     default: false
   size:
-    $ref: ../defs/size.yml
+    $ref: styles/size.yml
   mainStyle:
-    $ref: ../defs/style.yml
+    $ref: styles/style.yml
   child:
     $ref: ../lenra-component.yml
   icon:
-    $ref: ../components/icon.yml
+    $ref: icon.yml
 required:
   - _type
   - text
