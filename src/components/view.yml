@@ -14,7 +14,7 @@ properties:
     $ref: ../defs/props.yml
   find:
     description: Find query.
-    $ref: ../defs/find.yml
+    $ref: ../data/find.yml
   context:
     description: The context projection. This field represents the projection of the
       context, allowing selective retrieval of specific elements. It is a map
@@ -24,3 +24,16 @@ required:
   - _type
   - name
 additionalProperties: false
+definitions:
+  find:
+    description: Find query for view components
+    allOf:
+      - $ref: ../data/find-base.yml
+      - properties:
+          coll:
+            description: the collection where the query is applied
+            type: string
+          required:
+            - coll
+    additionalProperties: false
+

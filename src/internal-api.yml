@@ -9,20 +9,239 @@ info:
     name: Lenra
     url: https://www.lenra.io/contact.html
 tags:
-  - name: api
-    description: Public API used by the Lenra apps client and the backoffice
-  - name: websocket
-    description: WebSocket used by the Lenra apps
+  - name: Data
+    description: Data management API
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: [api, transaction]
 paths:
-  # "/health":
-  #   get:
-  #     summary: Healthcheck
-  #     operationId: healthcheck
-  #     description: Healthcheck for the Lenra server, indicates if the server is running and available
-  #     tags:
-  #       - internal
-  #     responses:
-  #       '200':
-  #         description: Healthy
-  #       '500':
-  #         description: Not healthy
+# Data
+  # CRUD
+    "/app/data/colls/{coll}/docs":
+      post:
+        tags:
+          - Data
+        summary: Creates a document in database
+        operationId: createDocument
+        parameters:
+          - name: coll
+            in: path
+            description: The document collection name
+            required: true
+            schema:
+              type: string
+        requestBody:
+          description: The document to create
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+        responses:
+          '200':
+            description: Document created
+            content:
+              application/json:
+                schema:
+                  $ref: 'data/document.yml'
+    "/app/data/colls/{coll}/docs/{id}":
+      get:
+        tags:
+          - Data
+        summary: Gets a document from database
+        operationId: getDocumentById
+        parameters:
+          - name: coll
+            in: path
+            description: The document collection name
+            required: true
+            schema:
+              type: string
+          - name: id
+            in: path
+            description: The document identifier
+            required: true
+            schema:
+              type: string
+        responses:
+          '200':
+            description: Document created
+            content:
+              application/json:
+                schema:
+                  $ref: 'data/document.yml'
+      put:
+        tags:
+          - Data
+        summary: Updates a document in database
+        operationId: updateDocumentById
+        parameters:
+          - name: coll
+            in: path
+            description: The document collection name
+            required: true
+            schema:
+              type: string
+          - name: id
+            in: path
+            description: The document identifier
+            required: true
+            schema:
+              type: string
+        requestBody:
+          description: The document to update
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: 'data/document.yml'
+        responses:
+          '200':
+            description: Document updated
+            content:
+              application/json:
+                schema:
+                  $ref: 'data/document.yml'
+      delete:
+        tags:
+          - Data
+        summary: Deletes a document from database
+        operationId: deleteDocumentById
+        parameters:
+          - name: coll
+            in: path
+            description: The document collection name
+            required: true
+            schema:
+              type: string
+          - name: id
+            in: path
+            description: The document identifier
+            required: true
+            schema:
+              type: string
+        responses:
+          '200':
+            description: Document deleted
+            content:
+              application/json:
+                schema:
+                  $ref: 'data/document.yml'
+  # Mongo functions
+    "/app/data/colls/{coll}/docs/find":
+      post:
+        tags:
+          - Data
+        summary: Finds documents in database
+        operationId: findDocuments
+        parameters:
+          - name: coll
+            in: path
+            description: The document collection name
+            required: true
+            schema:
+              type: string
+        requestBody:
+          description: The query to find documents
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  query:
+                    $ref: data/query.yml
+                  projection:
+                    type: object
+                required:
+                  - query
+                additionalProperties: false
+        responses:
+          '200':
+            description: Documents found
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: 'data/document.yml'
+    "/app/data/colls/{coll}/updateMany":
+      post:
+        tags:
+          - Data
+        summary: Updates many documents in database
+        operationId: updateManyDocuments
+        parameters:
+          - name: coll
+            in: path
+            description: The document collection name
+            required: true
+            schema:
+              type: string
+        requestBody:
+          description: The query to find documents
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  filter:
+                    $ref: data/query.yml
+                  update:
+                    $ref: data/update.yml
+                required:
+                  - query
+                  - update
+                additionalProperties: false
+        responses:
+          '200':
+            description: Documents updated
+            content:
+              application/json:
+                schema:
+                  type: object
+                  # TODO: implement https://www.mongodb.com/docs/manual/reference/method/db.collection.updateMany/#returns
+  # Transactions
+    "/app/data/transaction":
+      post:
+        tags:
+          - Data
+        summary: Creates a transaction
+        operationId: createTransaction
+        security:
+          - bearerAuth: [api]
+        responses:
+          '200':
+            description: Transaction created
+            content:
+              application/json:
+                schema:
+                  description: The transaction token
+                  type: string
+    "/app/data/transaction/commit":
+      post:
+        tags:
+          - Data
+        summary: Commits a transaction
+        operationId: commitTransaction
+        security:
+          - bearerAuth: [transaction]
+        responses:
+          '200':
+            description: Transaction commited
+    "/app/data/transaction/abort":
+      post:
+        tags:
+          - Data
+        summary: Aborts a transaction
+        operationId: abortTransaction
+        security:
+          - bearerAuth: [transaction]
+        responses:
+          '200':
+            description: Transaction aborted

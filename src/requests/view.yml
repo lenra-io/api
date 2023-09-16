@@ -21,15 +21,8 @@ required:
 definitions:
   data: 
     oneOf:
-    # - $ref: "#/definitions/document"
+    # Uncomment this line when the findOne method will be implemented
+    # - $ref: "../data/document.yml"
     - type: array
       items:
-        $ref: "#/definitions/document"
-  document: 
-    type: object
-    properties:
-      _id: 
-        type: string
-    required:
-    - _id
-    additionalProperties: true
+        $ref: "../data/document.yml"
