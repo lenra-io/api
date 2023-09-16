@@ -1,0 +1,8 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/view-response.yml
+title: AppRequest
+description: The Lenra application request
+oneOf:
+  - $ref: requests/view.yml
+  - $ref: requests/listener.yml
+  - $ref: requests/resource.yml

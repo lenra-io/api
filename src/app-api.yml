@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Lenra App API
+  description: Lenra App API documentation
+  license:
+    name: MIT
+  version: 0.0.0
+  contact:
+    name: Lenra
+    url: https://www.lenra.io/contact.html
+paths:
+  "/*":
+    post:
+      summary: App request
+      operationId: app-request
+      description: Request to a Lenra app
+      tags:
+        - internal
+      requestBody:
+        description: The request to the Lenra app
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "app-request.yml"
+      responses:
+        '200':
+          description: The response from the Lenra app
+          content:
+            application/json:
+              schema:
+                $ref: "#/definitions/response"
+        '500':
+          description: Unexpected app error
+definitions:
+  reponse:
+    oneOf:
+      - $ref: "view-response.yml"
+      - $ref: "#/definitions/listener-response"
+      - $ref: "#/definitions/resource-response"
+  listener-response: {}
+  resource-response:
+    type: string
+    format: binary
+  

@@ -1,0 +1,7 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/view-response.yml
+title: ViewResponse
+description: The Lenra application view response
+oneOf:
+  - $ref: responses/lenra-view.yml
+  - $ref: responses/json-view.yml
