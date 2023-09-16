@@ -21,7 +21,43 @@ security:
 paths:
 # Data
   # CRUD
-    "/app-api/v1-api/v1/data/colls/{coll}/docs":
+    "/app-api/v1-api/v1/data/colls/{coll}":
+      delete:
+        tags:
+          - Data
+        summary: Deletes a collection from database
+        operationId: deleteCollection
+        parameters:
+          - name: coll
+            in: path
+            description: The document collection name
+            required: true
+            schema:
+              type: string
+        responses:
+          '200': {}
+    "/app-api/v1/data/colls/{coll}/docs":
+      get:
+        tags:
+          - Data
+        summary: Gets documents from database
+        operationId: getDocuments
+        parameters:
+          - name: coll
+            in: path
+            description: The document collection name
+            required: true
+            schema:
+              type: string
+        responses:
+          '200':
+            description: Documents found
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: 'data/document.yml'
       post:
         tags:
           - Data
@@ -245,3 +281,4 @@ paths:
         responses:
           '200':
             description: Transaction aborted
+# 
