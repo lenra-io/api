@@ -29,17 +29,18 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/definitions/response"
+                $ref: "#/components/schemas/response"
         '500':
           description: Unexpected app error
-definitions:
-  reponse:
-    oneOf:
-      - $ref: "view-response.yml"
-      - $ref: "#/definitions/listener-response"
-      - $ref: "#/definitions/resource-response"
-  listener-response: {}
-  resource-response:
-    type: string
-    format: binary
+components:
+  schemas:
+    reponse:
+      oneOf:
+        - $ref: "view-response.yml"
+        - $ref: "#/components/schemas/listener-response"
+        - $ref: "#/components/schemas/resource-response"
+    listener-response: {}
+    resource-response:
+      type: string
+      format: binary
   
