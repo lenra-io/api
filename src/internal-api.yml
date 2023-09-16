@@ -21,7 +21,7 @@ security:
 paths:
 # Data
   # CRUD
-    "/app/data/colls/{coll}/docs":
+    "/app-api/v1-api/v1/data/colls/{coll}/docs":
       post:
         tags:
           - Data
@@ -48,7 +48,7 @@ paths:
               application/json:
                 schema:
                   $ref: 'data/document.yml'
-    "/app/data/colls/{coll}/docs/{id}":
+    "/app-api/v1/data/colls/{coll}/docs/{id}":
       get:
         tags:
           - Data
@@ -132,7 +132,7 @@ paths:
                 schema:
                   $ref: 'data/document.yml'
   # Mongo functions
-    "/app/data/colls/{coll}/docs/find":
+    "/app-api/v1/data/colls/{coll}/docs/find":
       post:
         tags:
           - Data
@@ -169,7 +169,7 @@ paths:
                   type: array
                   items:
                     $ref: 'data/document.yml'
-    "/app/data/colls/{coll}/updateMany":
+    "/app-api/v1/data/colls/{coll}/updateMany":
       post:
         tags:
           - Data
@@ -207,7 +207,7 @@ paths:
                   type: object
                   # TODO: implement https://www.mongodb.com/docs/manual/reference/method/db.collection.updateMany/#returns
   # Transactions
-    "/app/data/transaction":
+    "/app-api/v1/data/transaction":
       post:
         tags:
           - Data
@@ -223,7 +223,7 @@ paths:
                 schema:
                   description: The transaction token
                   type: string
-    "/app/data/transaction/commit":
+    "/app-api/v1/data/transaction/commit":
       post:
         tags:
           - Data
@@ -234,7 +234,7 @@ paths:
         responses:
           '200':
             description: Transaction commited
-    "/app/data/transaction/abort":
+    "/app-api/v1/data/transaction/abort":
       post:
         tags:
           - Data
