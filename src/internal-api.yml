@@ -231,7 +231,7 @@ paths:
                   update:
                     $ref: data/update.yml
                 required:
-                  - query
+                  - filter
                   - update
                 additionalProperties: false
         responses:
