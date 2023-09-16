@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.0.0
 info:
   title: Lenra server public API
   description: Lenra server public API documentation
@@ -13,6 +13,7 @@ servers:
   description: Public API URL
   variables:
     protocol:
+      default: https
       enum:
         - https
         - wss

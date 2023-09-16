@@ -22,7 +22,8 @@ files.forEach(async file => {
     const schema = await JsonSchemaUnifier.unify(
         filePath,
         {
-            definitionsPath: isApi ? "components/schemas" : "definitions"
+            definitionsPath: isApi ? "components/schemas" : "definitions",
+            definitionsPathSeparator: "."
         }
     );
     fs.writeFileSync(
