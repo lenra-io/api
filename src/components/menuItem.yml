@@ -19,9 +19,9 @@ properties:
     type: boolean
     default: false
   icon:
-    $ref: ../components/icon.yml
+    $ref: icon.yml
   onPressed:
-    $ref: ./listener.yml
+    $ref: listener.yml
 required:
   - _type
   - text

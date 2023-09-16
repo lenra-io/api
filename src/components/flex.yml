@@ -14,7 +14,7 @@ properties:
     items:
       $ref: ../lenra-component.yml
   direction:
-    $ref: ../defs/direction.yml
+    $ref: styles/direction.yml
   mainAxisAlignment:
     description: The alignment along the main axis
     type: string
@@ -49,13 +49,13 @@ properties:
     type: boolean
     default: false
   padding:
-    $ref: ../defs/padding.yml
+    $ref: styles/padding.yml
   horizontalDirection:
-    $ref: ../defs/textDirection.yml
+    $ref: styles/textDirection.yml
   verticalDirection:
-    $ref: ../defs/verticalDirection.yml
+    $ref: styles/verticalDirection.yml
   textBaseline:
-    $ref: ../defs/textBaseline.yml
+    $ref: styles/textBaseline.yml
 required:
   - _type
   - children

@@ -16,9 +16,9 @@ properties:
   onPressed:
     $ref: ./listener.yml
   style:
-    $ref: ../defs/checkboxStyle.yml
+    $ref: styles/checkboxStyle.yml
   materialTapTargetSize:
-    $ref: ../defs/materialTapTargetSize.yml
+    $ref: styles/materialTapTargetSize.yml
   autofocus:
     description: Whether the checkbox is focused initially.
     type: boolean

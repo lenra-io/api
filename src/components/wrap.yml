@@ -13,9 +13,9 @@ properties:
     items:
       $ref: ../lenra-component.yml
   direction:
-    $ref: ../defs/direction.yml
+    $ref: styles/direction.yml
   crossAxisAlignment:
-    $ref: ../defs/wrapCrossAlignment.yml
+    $ref: styles/wrapCrossAlignment.yml
   spacing:
     description: The spacing between each child of the wrap.
     type: number
@@ -25,13 +25,13 @@ properties:
     type: number
     default: 0
   alignment:
-    $ref: ../defs/wrapAlignment.yml
+    $ref: styles/wrapAlignment.yml
   runAlignment:
-    $ref: ../defs/wrapAlignment.yml
+    $ref: styles/wrapAlignment.yml
   horizontalDirection:
-    $ref: ../defs/textDirection.yml
+    $ref: styles/textDirection.yml
   verticalDirection:
-    $ref: ../defs/verticalDirection.yml
+    $ref: styles/verticalDirection.yml
 required:
   - _type
   - children

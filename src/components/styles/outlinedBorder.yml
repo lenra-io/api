@@ -1,0 +1,9 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/styles/outlinedBorder.yml.yml
+title: OutlinedBorder
+description: Element of type OutlinedBorder
+type: object
+properties:
+  side:
+    $ref: borderSide.yml
+additionalProperties: false

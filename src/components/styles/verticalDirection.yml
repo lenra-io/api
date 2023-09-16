@@ -1,0 +1,9 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/styles/verticalDirection.yml.yml
+title: Vertical Direction
+description: How the objects should be aligned following the vertical axis.
+type: string
+enum:
+  - down
+  - up
+default: down

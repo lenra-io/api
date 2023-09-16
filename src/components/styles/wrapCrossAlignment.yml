@@ -1,0 +1,10 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/styles/wrapCrossAlignment.yml.yml
+title: Wrap CrossAlignment
+description: How the objects in the Wrap should be aligned on the CrossAxis.
+type: string
+enum:
+  - start
+  - end
+  - center
+default: start

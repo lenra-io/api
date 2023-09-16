@@ -18,14 +18,14 @@ properties:
     type: string
   materialTapTargetSize:
     description: Configures the minimum size of the tap target.
-    $ref: ../defs/materialTapTargetSize.yml
+    $ref: styles/materialTapTargetSize.yml
   onPressed:
     $ref: ./listener.yml
   toggleable:
     description: Whether the radio is allowed to go from checked to unchecked when clicking on it.
     type: boolean
   style:
-    $ref: ../defs/radioStyle.yml
+    $ref: styles/radioStyle.yml
   name:
     description: The name that will be used in the form.
     type: string

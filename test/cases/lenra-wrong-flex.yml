@@ -38,7 +38,7 @@ errors:
     missingProperty: text
   message: must have required property 'text'
 - instancePath: /direction
-  schemaPath: "#/definitions/defs/direction/enum"
+  schemaPath: "#/definitions/components/styles/direction/enum"
   keyword: enum
   params:
     allowedValues:

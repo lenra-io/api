@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/styles/border.yml.yml
+title: Border
+description: Element of type Border
+type: object
+properties:
+  top:
+    $ref: borderSide.yml
+  left:
+    $ref: borderSide.yml
+  bottom:
+    $ref: borderSide.yml
+  right:
+    $ref: borderSide.yml
+additionalProperties: false

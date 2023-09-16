@@ -1,0 +1,11 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/styles/filterQuality.yml.yml
+title: Filter Quality
+description: The filter quality to use.
+type: string
+enum:
+  - high
+  - medium
+  - low
+  - none
+default: low

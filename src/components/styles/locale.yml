@@ -1,0 +1,16 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/styles/locale.yml.yml
+title: Locale
+description: Element of type locale
+type: object
+properties:
+  countryCode:
+    description: The region subtag for the locale.
+    type: string
+  languageCode:
+    description: The primary language subtag for the locale.
+    type: string
+  scriptCode:
+    description: The script subtag for the locale.
+    type: string
+additionalProperties: false
