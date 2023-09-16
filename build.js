@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { JsonSchemaUnifier } from '@lenra/json-schema-unifier';
+import * as YAML from 'yaml';
 
 const srcPath = path.resolve('src');
 const distPath = path.resolve('dist');
@@ -15,7 +16,17 @@ if (!fs.existsSync(distPath)) {
 // Pour chaque fichier, unifier les schema en un seul fichier
 files.forEach(async file => {
     const filePath = path.resolve(srcPath, file);
-    const distFilePath = path.resolve(distPath, file.replace(/\.ya?ml$/, ".schema.json"));
-    const schema = await JsonSchemaUnifier.unify(filePath);
-    fs.writeFileSync(distFilePath, JSON.stringify(schema, null, 2));
+    const isApi = file.endsWith('-api.yml');
+    const fileName = isApi ? file : file.replace(/\.yml$/, ".schema.json");
+    const distFilePath = path.resolve(distPath, fileName);
+    const schema = await JsonSchemaUnifier.unify(
+        filePath,
+        {
+            definitionsPath: isApi ? "components/schemas" : "definitions"
+        }
+    );
+    fs.writeFileSync(
+        distFilePath,
+        isApi ? YAML.stringify(schema) : JSON.stringify(schema, null, 2)
+    );
 });
