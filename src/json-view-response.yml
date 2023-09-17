@@ -15,10 +15,12 @@ definitions:
       - type: number
       - type: integer
       - type: boolean
-      - type: array
-        items:
-          $ref: "#/definitions/value"
-      - $ref: "../json-component.yml"
+      - $ref: "#/definitions/array"
+      - $ref: "json-component.yml"
       - $ref: "#/definitions/json"
     nullable: true
+  array:
+    type: array
+    items:
+      $ref: "#/definitions/value"
   
