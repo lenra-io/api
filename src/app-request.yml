@@ -3,6 +3,6 @@ $id: https://app.lenra.io/view-response.yml
 title: AppRequest
 description: The Lenra application request
 oneOf:
-  - $ref: requests/view.yml
-  - $ref: requests/listener.yml
-  - $ref: requests/resource.yml
+  - $ref: view-request.yml
+  - $ref: listener-request.yml
+  - $ref: resource-request.yml

@@ -7,7 +7,7 @@ info:
   version: 0.0.0
   contact:
     name: Lenra
-    url: https://www.lenra.io/contact.
+    url: https://www.lenra.io/contact.html
 servers:
 - url: 'http://localhost:8080'
   description: Exposed devtool app
