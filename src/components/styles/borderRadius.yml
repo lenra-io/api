@@ -15,6 +15,7 @@ properties:
 additionalProperties: false
 definitions:
   radiusType:
+    title: Radius
     type: object
     properties:
       x:

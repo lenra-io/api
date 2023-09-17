@@ -17,8 +17,10 @@ properties:
 additionalProperties: false
 required:
 - listener
+- api
 definitions:
   api:
+    title: ApiInformations
     description: The internal API informations
     type: object
     properties:
@@ -28,3 +30,7 @@ definitions:
       token:
         description: The token to use to authenticate the request
         type: string
+    required:
+    - url
+    - token
+    additionalProperties: false

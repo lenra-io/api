@@ -2,14 +2,16 @@ $schema: http://json-schema.org/draft-07/schema
 $id: https://app.lenra.io/responses/json-view.yml
 title: JsonViewResponse
 description: The Lenra application JSON view response
-$ref: "#/definitions/json"
+$ref: "#/definitions/object"
 definitions:
-  json: 
+  object: 
+    title: JsonObject
     type: object
     patternProperties:
       ".+":
         $ref: "#/definitions/value"
   value:
+    title: JsonValue
     oneOf:
       - type: string
       - type: number
@@ -17,9 +19,10 @@ definitions:
       - type: boolean
       - $ref: "#/definitions/array"
       - $ref: "json-component.yml"
-      - $ref: "#/definitions/json"
+      - $ref: "#/definitions/object"
     nullable: true
   array:
+    title: JsonArray
     type: array
     items:
       $ref: "#/definitions/value"
