@@ -11,11 +11,6 @@ properties:
     description: The JSON exposer definition of the application
     $ref: "#/definitions/exposer"
 additionalProperties: false
-oneOf:
-- required:
-  - lenra
-- required:
-  - json
 definitions:
   exposer: 
     type: object
