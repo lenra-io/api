@@ -172,7 +172,7 @@ paths:
                 schema:
                   $ref: 'data/document.yml'
   # Mongo functions
-    "/app-api/v1/data/colls/{coll}/docs/find":
+    "/app-api/v1/data/colls/{coll}/find":
       post:
         tags:
           - Data
