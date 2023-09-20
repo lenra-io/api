@@ -8,7 +8,7 @@ properties:
     description: The identifier of the component
     const: overlayEntry
   child:
-    $ref: ../lenra-component.yml
+    $ref: lenra.yml
   maintainState:
     description: Whether this entry must be included in the tree even if there is a fully opaque entry above it.
     type: boolean

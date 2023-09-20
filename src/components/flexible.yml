@@ -15,7 +15,7 @@ properties:
   fit:
     $ref: styles/flexFit.yml
   child:
-    $ref: ../lenra-component.yml
+    $ref: lenra.yml
 required:
   - _type
   - child

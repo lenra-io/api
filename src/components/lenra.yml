@@ -1,0 +1,28 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/components/lenra.yml
+title: LenraComponent
+description: Any component
+oneOf:
+  - $ref: actionable.yml
+  - $ref: button.yml
+  - $ref: carousel.yml
+  - $ref: checkbox.yml
+  - $ref: container.yml
+  - $ref: dropdownButton.yml
+  - $ref: flex.yml
+  - $ref: flexible.yml
+  - $ref: form.yml
+  - $ref: icon.yml
+  - $ref: image.yml
+  - $ref: menu.yml
+  - $ref: menuItem.yml
+  - $ref: overlayEntry.yml
+  - $ref: radio.yml
+  - $ref: slider.yml
+  - $ref: stack.yml
+  - $ref: statusSticker.yml
+  - $ref: text.yml
+  - $ref: textfield.yml
+  - $ref: toggle.yml
+  - $ref: view.yml
+  - $ref: wrap.yml

@@ -12,7 +12,7 @@ properties:
     description: The children
     type: array
     items:
-      $ref: ../lenra-component.yml
+      $ref: lenra.yml
   direction:
     $ref: styles/direction.yml
   mainAxisAlignment:

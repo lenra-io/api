@@ -11,7 +11,7 @@ properties:
     description: The children
     type: array
     items:
-        $ref: ../lenra-component.yml
+        $ref: lenra.yml
   options:
     $ref: styles/carouselOptions.yml
 required:

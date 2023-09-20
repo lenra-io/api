@@ -25,7 +25,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "app-request.yml"
+              $ref: "requests/app.yml"
       responses:
         '200':
           description: The response from the Lenra app
@@ -39,7 +39,7 @@ components:
   schemas:
     response:
       oneOf:
-        - $ref: "view-response.yml"
+        - $ref: "responses/view.yml"
         - $ref: "#/components/schemas/listener-response"
         - $ref: "#/components/schemas/resource-response"
     listener-response: {}

@@ -9,7 +9,7 @@ properties:
     description: The identifier of the component
     const: container
   child:
-    $ref: ../lenra-component.yml
+    $ref: lenra.yml
   alignment:
     $ref: styles/alignment.yml
   border:
