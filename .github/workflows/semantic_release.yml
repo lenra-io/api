@@ -28,10 +28,15 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npm run build
+      - name: Generate archive
+        run: |
+          cd dist
+          tar czvf api.tar.gz *
+          mv api.tar.gz ../
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
-          path: dist/*
+          path: api.tar.gz
   release:
     needs: [generate-artifacts]
     if: ${{ needs.get-next-version.outputs.will-release == 'true' }}
