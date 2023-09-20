@@ -17,7 +17,7 @@ if (!fs.existsSync(distPath)) {
 files.forEach(async filePath => {
     const isApi = filePath.endsWith('-api.yml');
     let distFilePath = filePath.replace(srcPath, distPath);
-    if (isApi) {
+    if (!isApi) {
         distFilePath = distFilePath.replace(/\.yml$/, ".schema.json");
     }
     const schema = await JsonSchemaUnifier.unify(
