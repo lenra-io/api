@@ -8,7 +8,7 @@ properties:
     description: The identifier of the component
     const: actionable
   child:
-    $ref: ../lenra-component.yml
+    $ref: lenra.yml
   onPressed:
     description: The listener to be called when the actionable is pressed.
     $ref: ./listener.yml

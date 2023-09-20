@@ -1,4 +1,4 @@
-schema: lenra-component.yml
+schema: components/lenra.yml
 valid: false
 errors:
 - instancePath: ""
@@ -38,7 +38,7 @@ errors:
     missingProperty: text
   message: must have required property 'text'
 - instancePath: /direction
-  schemaPath: "#/definitions/components/styles/direction/enum"
+  schemaPath: "#/definitions/styles/direction/enum"
   keyword: enum
   params:
     allowedValues:
@@ -106,7 +106,7 @@ errors:
     additionalProperty: direction
   message: must NOT have additional properties
 - instancePath: ""
-  schemaPath: "#/definitions/components/statusSticker/required"
+  schemaPath: "#/definitions/statusSticker/required"
   keyword: required
   params:
     missingProperty: status

@@ -12,7 +12,7 @@ properties:
     description: The children of the Stack.
     type: array
     items:
-        $ref: ../lenra-component.yml
+        $ref: lenra.yml
   alignment:
     $ref: styles/alignment.yml
   fit:

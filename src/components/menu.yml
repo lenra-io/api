@@ -12,7 +12,7 @@ properties:
     type: array
     description: The menu items
     items:
-      $ref: ../lenra-component.yml
+      $ref: lenra.yml
 required:
   - _type
   - children

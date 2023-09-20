@@ -11,7 +11,7 @@ properties:
     description: The JSON exposer definition of the application
     $ref: "#/definitions/data"
   props:
-    $ref: "defs/props.yml"
+    $ref: "../defs/props.yml"
   context:
     description: The context of current the view rendering
     type: object
@@ -25,4 +25,4 @@ definitions:
     # - $ref: "../data/document.yml"
     - type: array
       items:
-        $ref: "data/document.yml"
+        $ref: "../data/document.yml"

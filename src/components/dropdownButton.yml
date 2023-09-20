@@ -20,7 +20,7 @@ properties:
   mainStyle:
     $ref: styles/style.yml
   child:
-    $ref: ../lenra-component.yml
+    $ref: lenra.yml
   icon:
     $ref: icon.yml
 required:

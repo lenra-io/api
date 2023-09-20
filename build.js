@@ -7,18 +7,19 @@ const srcPath = path.resolve('src');
 const distPath = path.resolve('dist');
 
 // Boucler sur les fichiers du dossier src (en ignorant ceux qui commencent par un . et les dossiers)
-const files = fs.readdirSync(srcPath).filter(file => !file.startsWith('.') && !fs.lstatSync(path.resolve(srcPath, file)).isDirectory());
+const files = getFiles(srcPath);
 
 if (!fs.existsSync(distPath)) {
     fs.mkdirSync(distPath);
 }
 
 // Pour chaque fichier, unifier les schema en un seul fichier
-files.forEach(async file => {
-    const filePath = path.resolve(srcPath, file);
-    const isApi = file.endsWith('-api.yml');
-    const fileName = isApi ? file : file.replace(/\.yml$/, ".schema.json");
-    const distFilePath = path.resolve(distPath, fileName);
+files.forEach(async filePath => {
+    const isApi = filePath.endsWith('-api.yml');
+    let distFilePath = filePath.replace(srcPath, distPath);
+    if (isApi) {
+        distFilePath = distFilePath.replace(/\.yml$/, ".schema.json");
+    }
     const schema = await JsonSchemaUnifier.unify(
         filePath,
         {
@@ -26,8 +27,28 @@ files.forEach(async file => {
             definitionsPathSeparator: "."
         }
     );
+    const distDirPath = path.dirname(distFilePath);
+    if (!fs.existsSync(distDirPath)) {
+        fs.mkdirSync(distDirPath, { recursive: true });
+    }
     fs.writeFileSync(
         distFilePath,
         isApi ? YAML.stringify(schema) : JSON.stringify(schema, null, 2)
     );
 });
+
+function getFiles(dirPath, ignore = true) {
+    let files = fs.readdirSync(dirPath);
+    if (ignore) {
+        files = files.filter(file => !file.startsWith('.'));
+    }
+    return files.flatMap(file => {
+        const filePath = path.resolve(dirPath, file);
+        const stat = fs.lstatSync(filePath);
+        if (stat.isDirectory()) {
+            return getFiles(filePath);
+        } else {
+            return [filePath];
+        }
+    });
+}

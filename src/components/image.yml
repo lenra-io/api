@@ -24,7 +24,7 @@ properties:
     $ref: styles/rect.yml
   errorPlaceholder:
     description: The error placeholder when the image encounters an error during loading.
-    $ref: ../lenra-component.yml
+    $ref: lenra.yml
   excludeFromSemantics:
     description: Whether to exclude this image from semantics.
     type: boolean
@@ -37,7 +37,7 @@ properties:
     $ref: styles/boxFit.yml
   framePlaceholder:
     description: A placeholder to display while the image is loading or to add effects to the image.
-    $ref: ../lenra-component.yml
+    $ref: lenra.yml
   gaplessPlayback:
     description: Whether the old image (true) or nothing (false) is shown when the image provider changes.
     type: boolean
@@ -48,7 +48,7 @@ properties:
     default: false
   loadingPlaceholder:
     description: A placeholder to display while the image is still loading.
-    $ref: ../lenra-component.yml
+    $ref: lenra.yml
   repeat:
     description: How the image should be repeated accross the bounds not covered by the image.
     $ref: styles/imageRepeat.yml

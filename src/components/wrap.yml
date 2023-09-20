@@ -11,7 +11,7 @@ properties:
     description: The children of the wrap.
     type: array
     items:
-      $ref: ../lenra-component.yml
+      $ref: lenra.yml
   direction:
     $ref: styles/direction.yml
   crossAxisAlignment:
