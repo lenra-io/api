@@ -28,11 +28,12 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npm run build
+      - run: mkdir artifacts
+      - run: cp load-api.sh artifacts/
       - name: Generate archive
         run: |
           cd dist
           tar czvf api.tar.gz *
-          mkdir ../artifacts
           mv api.tar.gz ../artifacts/
       - name: Upload
         uses: actions/upload-artifact@v3
