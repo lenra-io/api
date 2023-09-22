@@ -32,11 +32,12 @@ jobs:
         run: |
           cd dist
           tar czvf api.tar.gz *
-          mv api.tar.gz ../
+          mkdir ../artifacts
+          mv api.tar.gz ../artifacts/
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
-          path: api.tar.gz
+          path: artifacts/*
   release:
     needs: [generate-artifacts]
     if: ${{ needs.get-next-version.outputs.will-release == 'true' }}
