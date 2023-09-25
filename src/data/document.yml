@@ -3,9 +3,7 @@ $id: https://app.lenra.io/data/document.yml
 title: Document
 description: A document in MongoDB database
 type: object
-properties:
-  _id: 
-    type: string
-required:
-- _id
-additionalProperties: true
+patternProperties:
+  ^[a-zA-Z0-9_]+$:
+    type: object
+additionalProperties: {}

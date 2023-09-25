@@ -4,6 +4,7 @@ info:
   description: Lenra server public API documentation
   license:
     name: MIT
+    url: https://opensource.org/licenses/MIT
   version: 0.0.0
   contact:
     name: Lenra

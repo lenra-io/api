@@ -3,4 +3,4 @@ $id: https://app.lenra.io/data/projection.yml
 title: Projection
 description: Mongo data query projection
 type: object
-additionalProperties: true
+additionalProperties: {}

@@ -9,20 +9,14 @@ properties:
     description: The requested view name
   data: 
     description: The JSON exposer definition of the application
-    $ref: "#/definitions/data"
+    $ref: "../data/result/find.yml"
   props:
     $ref: "../defs/props.yml"
   context:
     description: The context of current the view rendering
     type: object
+    additionalProperties: {}
+    nullable: true
 additionalProperties: false
 required:
 - view
-definitions:
-  data: 
-    oneOf:
-    # Uncomment this line when the findOne method will be implemented
-    # - $ref: "../data/document.yml"
-    - type: array
-      items:
-        $ref: "../data/document.yml"
