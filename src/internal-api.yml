@@ -4,6 +4,7 @@ info:
   description: The API usable by the Lenra appmications
   license:
     name: MIT
+    url: https://opensource.org/licenses/MIT
   version: 0.0.0
   contact:
     name: Lenra
@@ -206,9 +207,7 @@ paths:
             content:
               application/json:
                 schema:
-                  type: array
-                  items:
-                    $ref: 'data/document.yml'
+                  $ref: data/result/find.yml
     "/app-api/v1/data/colls/{coll}/updateMany":
       post:
         tags:
@@ -232,8 +231,10 @@ paths:
                 properties:
                   filter:
                     $ref: data/query.yml
+                    nullable: false
                   update:
                     $ref: data/update.yml
+                    nullable: false
                 required:
                   - filter
                   - update

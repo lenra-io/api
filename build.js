@@ -16,10 +16,6 @@ if (!fs.existsSync(distPath)) {
 // Pour chaque fichier, unifier les schema en un seul fichier
 files.forEach(async filePath => {
     const isApi = filePath.endsWith('-api.yml');
-    let distFilePath = filePath.replace(srcPath, distPath);
-    if (!isApi) {
-        distFilePath = distFilePath.replace(/\.yml$/, ".schema.json");
-    }
     const schema = await JsonSchemaUnifier.unify(
         filePath,
         {
@@ -27,14 +23,19 @@ files.forEach(async filePath => {
             definitionsPathSeparator: "."
         }
     );
+    let distFilePath = filePath.replace(srcPath, distPath).replace(/\.yml$/, "");
+
     const distDirPath = path.dirname(distFilePath);
     if (!fs.existsSync(distDirPath)) {
         fs.mkdirSync(distDirPath, { recursive: true });
     }
-    fs.writeFileSync(
-        distFilePath,
-        isApi ? YAML.stringify(schema) : JSON.stringify(schema, null, 2)
-    );
+    const fileExt = isApi ? ["json", "yml"] : ["schema.json"];
+    fileExt.forEach(ext => {
+        fs.writeFileSync(
+            `${distFilePath}.${ext}`,
+            ext.endsWith("json") ? JSON.stringify(schema, null, 2) : YAML.stringify(schema)
+        );
+    });
 });
 
 function getFiles(dirPath, ignore = true) {

@@ -12,6 +12,8 @@ properties:
   event:
     description: The event that triggered the listener
     type: object
+    additionalProperties: {}
+    nullable: true
   api:
     $ref: "#/definitions/api"
 additionalProperties: false
