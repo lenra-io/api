@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Lenra server internal API
-  description: The API usable by the Lenra appmications
+  description: The API usable by the Lenra applications
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
@@ -198,6 +198,8 @@ paths:
                     $ref: data/query.yml
                   projection:
                     type: object
+                    nullable: true
+                    additionalProperties: true
                 required:
                   - query
                 additionalProperties: false
