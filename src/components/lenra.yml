@@ -22,7 +22,7 @@ oneOf:
   - $ref: stack.yml
   - $ref: statusSticker.yml
   - $ref: text.yml
-  - $ref: textfield.yml
+  - $ref: textField.yml
   - $ref: toggle.yml
   - $ref: view.yml
   - $ref: wrap.yml
