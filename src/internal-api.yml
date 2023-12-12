@@ -66,29 +66,37 @@ paths:
       post:
         tags:
           - Data
-        summary: Creates a document in database
+        summary: Creates one or multiple documents in database
         operationId: createDocument
         parameters:
           - name: coll
             in: path
-            description: The document collection name
+            description: The document(s) collection name
             required: true
             schema:
               type: string
         requestBody:
-          description: The document to create
+          description: The document(s) to create
           required: true
           content:
             application/json:
               schema:
-                type: object
+                oneOf:
+                  - type: object
+                  - type: array
+                    items:
+                      type: object
         responses:
           '200':
-            description: Document created
+            description: Document(s) created
             content:
               application/json:
                 schema:
-                  $ref: 'data/document.yml'
+                  oneOf:
+                    - $ref: 'data/document.yml'
+                    - type: array
+                      items:
+                        $ref: 'data/document.yml'
     "/app-api/v1/data/colls/{coll}/docs/{id}":
       get:
         tags:
