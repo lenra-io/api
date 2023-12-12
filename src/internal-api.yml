@@ -66,37 +66,29 @@ paths:
       post:
         tags:
           - Data
-        summary: Creates one or multiple documents in database
+        summary: Creates one document in database
         operationId: createDocument
         parameters:
           - name: coll
             in: path
-            description: The document(s) collection name
+            description: The document collection name
             required: true
             schema:
               type: string
         requestBody:
-          description: The document(s) to create
+          description: The document to create
           required: true
           content:
             application/json:
               schema:
-                oneOf:
-                  - type: object
-                  - type: array
-                    items:
-                      type: object
+                type: object
         responses:
           '200':
-            description: Document(s) created
+            description: Document created
             content:
               application/json:
                 schema:
-                  oneOf:
-                    - $ref: 'data/document.yml'
-                    - type: array
-                      items:
-                        $ref: 'data/document.yml'
+                    $ref: 'data/document.yml'
     "/app-api/v1/data/colls/{coll}/docs/{id}":
       get:
         tags:
@@ -218,6 +210,37 @@ paths:
               application/json:
                 schema:
                   $ref: data/result/find.yml
+    "/app-api/v1/data/colls/{coll}/insertMany":
+      post:
+        tags:
+          - Data
+        summary: Inserts many documents in database
+        operationId: insertManyDocuments
+        parameters:
+          - name: coll
+            in: path
+            description: The documents collection name
+            required: true
+            schema:
+              type: string
+        requestBody:
+          description: The documents to create
+          required: true
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  type: object
+        responses:
+          '200':
+            description: Documents inserted
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items: 
+                    $ref: 'data/document.yml'
     "/app-api/v1/data/colls/{coll}/updateMany":
       post:
         tags:
