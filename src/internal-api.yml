@@ -200,6 +200,12 @@ paths:
                     type: object
                     nullable: true
                     additionalProperties: true
+                  limit:
+                    type: integer
+                    nullable: true
+                  skip:
+                    type: integer
+                    nullable: true
                 required:
                   - query
                 additionalProperties: false
