@@ -88,7 +88,7 @@ paths:
             content:
               application/json:
                 schema:
-                    $ref: 'data/document.yml'
+                  $ref: 'data/document.yml'
     "/app-api/v1/data/colls/{coll}/docs/{id}":
       get:
         tags:
@@ -229,18 +229,30 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items: 
-                  type: object
+                type: object
+                properties:
+                  documents:
+                    type: array
+                    items: 
+                      type: object
+                      additionalProperties: true
+                required:
+                  - documents
+                additionalProperties: false
         responses:
           '200':
             description: Documents inserted
             content:
               application/json:
                 schema:
-                  type: array
-                  items: 
-                    $ref: 'data/document.yml'
+                  type: object
+                  properties:
+                    insertedIds:
+                      type: array
+                      items: 
+                        type: string
+                  required:
+                    - insertedIds
     "/app-api/v1/data/colls/{coll}/updateMany":
       post:
         tags:
