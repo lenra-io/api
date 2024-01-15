@@ -66,7 +66,7 @@ paths:
       post:
         tags:
           - Data
-        summary: Creates a document in database
+        summary: Creates one document in database
         operationId: createDocument
         parameters:
           - name: coll
@@ -210,6 +210,49 @@ paths:
               application/json:
                 schema:
                   $ref: data/result/find.yml
+    "/app-api/v1/data/colls/{coll}/insertMany":
+      post:
+        tags:
+          - Data
+        summary: Inserts many documents in database
+        operationId: insertManyDocuments
+        parameters:
+          - name: coll
+            in: path
+            description: The documents collection name
+            required: true
+            schema:
+              type: string
+        requestBody:
+          description: The documents to create
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  documents:
+                    type: array
+                    items: 
+                      type: object
+                      additionalProperties: true
+                required:
+                  - documents
+                additionalProperties: false
+        responses:
+          '200':
+            description: Documents inserted
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    insertedIds:
+                      type: array
+                      items: 
+                        type: string
+                  required:
+                    - insertedIds
     "/app-api/v1/data/colls/{coll}/updateMany":
       post:
         tags:
