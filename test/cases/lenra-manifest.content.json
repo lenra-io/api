@@ -5,6 +5,16 @@
                 "path": "/",
                 "view": {
                     "_type": "view",
+                    "name": "guest-home"
+                },
+                "roles": [
+                    "guest"
+                ]
+            },
+            {
+                "path": "/",
+                "view": {
+                    "_type": "view",
                     "name": "home"
                 }
             },
