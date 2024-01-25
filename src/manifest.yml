@@ -33,6 +33,12 @@ definitions:
         type: string
       view: 
         $ref: "components/view.yml"
+      roles: 
+        type: array
+        description: The roles that can access this route
+        items:
+          type: string
+        nullable: true
     required:
     - path
     - view
