@@ -36,6 +36,7 @@ definitions:
       roles: 
         type: array
         description: The roles that can access this route
+        default: ["user"]
         items:
           type: string
         nullable: true
