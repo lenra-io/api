@@ -209,6 +209,9 @@ paths:
                       skip:
                         type: integer
                         nullable: true
+                      sort:
+                        type: object
+                        nullable: true
                 required:
                   - query
                 additionalProperties: false

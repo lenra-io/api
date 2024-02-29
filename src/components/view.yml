@@ -36,6 +36,8 @@ definitions:
         $ref: ../data/query.yml
       projection:
         $ref: ../data/projection.yml
+      options:
+        $ref: ../data/options.yml
     required:
       - coll
       - query

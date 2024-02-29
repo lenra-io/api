@@ -8,6 +8,8 @@ properties:
     $ref: query.yml
   projection:
     $ref: projection.yml
+  options:
+    $ref: options.yml
 required:
   - query
 additionalProperties: false
