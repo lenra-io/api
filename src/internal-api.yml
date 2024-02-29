@@ -201,14 +201,7 @@ paths:
                     nullable: true
                     additionalProperties: true
                   options:
-                    type: object
-                    properties:
-                      limit:
-                        type: integer
-                        nullable: true
-                      skip:
-                        type: integer
-                        nullable: true
+                    $ref: data/options.yml
                 required:
                   - query
                 additionalProperties: false
