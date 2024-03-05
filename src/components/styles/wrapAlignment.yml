@@ -1,6 +1,6 @@
 $schema: http://json-schema.org/draft-07/schema
 $id: https://app.lenra.io/components/styles/wrapAlignment.yml.yml
-title: Wrap Alignment
+title: WrapAlignment
 description: How the objects in the Wrap should be aligned.
 type: string
 enum:

@@ -1,6 +1,6 @@
 $schema: http://json-schema.org/draft-07/schema
 $id: https://app.lenra.io/components/styles/textDecoration.yml.yml
-title: Text Decoration
+title: TextDecoration
 description: Allows you to underline, overline or strike out the text.
 type: string
 enum:

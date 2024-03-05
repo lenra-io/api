@@ -1,6 +1,6 @@
 $schema: http://json-schema.org/draft-07/schema
 $id: https://app.lenra.io/components/styles/boxFit.yml.yml
-title: Box Fit
+title: BoxFit
 description: How the box should be fitted in its parent.
 type: string
 enum:

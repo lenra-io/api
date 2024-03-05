@@ -1,0 +1,6 @@
+$schema: http://json-schema.org/draft-07/schema
+$id: https://app.lenra.io/requests/manifest.yml
+title: ManifestRequest
+description: The Lenra application manifest request
+type: object
+additionalProperties: {}

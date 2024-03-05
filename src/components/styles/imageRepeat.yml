@@ -1,6 +1,6 @@
 $schema: http://json-schema.org/draft-07/schema
 $id: https://app.lenra.io/components/styles/imageRepeat.yml.yml
-title: Image Repeat
+title: ImageRepeat
 description: How the image should be painted on the areas that it does not cover.
 type: string
 enum:

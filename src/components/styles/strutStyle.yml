@@ -12,6 +12,8 @@ properties:
     description: The font family to use for this strut style.
   fontFamilyFallback:
     type: array
+    items:
+      type: string
     description: A list of fallback font families to use for this strut style.
   fontSize:
     type: number

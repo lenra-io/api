@@ -6,3 +6,4 @@ oneOf:
   - $ref: view.yml
   - $ref: listener.yml
   - $ref: resource.yml
+  - $ref: manifest.yml

@@ -2,7 +2,7 @@ $schema: http://json-schema.org/draft-07/schema
 $id: https://app.lenra.io/responses/json-view.yml
 title: JsonViewResponse
 description: The Lenra application JSON view response
-$ref: "#/definitions/value"
+$ref: "#/definitions/object"
 definitions:
   object: 
     title: JsonObject

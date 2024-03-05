@@ -21,11 +21,10 @@ properties:
     description: The font family of the text.
     type: string
   fontFamilyFallback:
-    description: The list of font families to use if the first font family could not
-      be found.
     type: array
     items:
       type: string
+    description: The list of font families to use if the first font family could not be found.
   fontSize:
     description: The size of the text.
     type: number
