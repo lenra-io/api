@@ -22,6 +22,10 @@ function main() {
 
   # if the versions don't match, then we need to load the new API
   if [ "$api_version" != "$current_api_version" ]; then
+    echo "Clean old API($current_api_version) files"
+
+    rm -Rf api/*
+
     echo "Loading API version $api_version"
 
     # download the API archive
@@ -38,7 +42,7 @@ function main() {
       if [ ! -f "$file" ]; then
         echo "Extracting $file from API version $api_version"
         # extract the file from the archive
-        tar -xzf --overwrite api.tar.gz $file
+        tar -xzf api.tar.gz $file
       fi
   done <<< "$api_files"
 }
