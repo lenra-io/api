@@ -20,7 +20,8 @@ files.forEach(async filePath => {
         filePath,
         {
             definitionsPath: isApi ? "components/schemas" : "definitions",
-            definitionsPathSeparator: "."
+            definitionsPathSeparator: ".",
+            baseDir: srcPath,
         }
     );
     let distFilePath = filePath.replace(srcPath, distPath).replace(/\.yml$/, "");

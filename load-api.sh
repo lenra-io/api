@@ -38,7 +38,7 @@ function main() {
       if [ ! -f "$file" ]; then
         echo "Extracting $file from API version $api_version"
         # extract the file from the archive
-        tar -xzf api.tar.gz $file
+        tar -xzf --overwrite api.tar.gz $file
       fi
   done <<< "$api_files"
 }
