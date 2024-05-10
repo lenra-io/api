@@ -4,4 +4,4 @@ title: JsonComponent
 description: Any component
 oneOf:
   - $ref: listener.yml
-  # - $ref: view.yml
+  - $ref: view.yml
